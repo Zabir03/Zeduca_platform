@@ -1,6 +1,6 @@
 # Zeduca Platform
 
-![Educa Logo](https://github.com/Zabir03/ZeducaLogo.git)
+![Educa Logo](https://github.com/Zabir03/ZeducaLogo/blob/main/ze.svg)
 
 **Zeduca Platform** is a web-based educational portal offering various programming topics—like C, C++, Java, DBMS, DSA—with a structured semester layout and practice quizzes.
 
