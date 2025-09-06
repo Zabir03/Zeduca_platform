@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Organization Details - Educa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .topic-section {
+            transition: box-shadow 0.3s ease;
+        }
+        .topic-section:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+        pre {
+            background-color: #1a202c; /* A slightly darker gray */
+            border-left: 4px solid #6366f1; /* Indigo border */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            color: #e2e8f0; /* Lighter text for contrast */
+            font-family: 'Fira Code', 'Courier New', monospace;
+        }
+        code {
+            font-family: 'Fira Code', 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header Section -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-indigo-500">Educa</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#home" class="text-gray-300 hover:text-white font-medium">Home</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-white font-medium">About</a>
+                <a href="index.html#courses" class="text-gray-300 hover:text-white font-medium">Courses</a>
+                <a href="index.html#contact" class="text-gray-300 hover:text-white font-medium">Contact</a>
+            </div>
+            <a href="login.html" class="hidden md:block bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">Get Started</a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl text-indigo-500"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-6 pt-2 pb-4">
+            <a href="index.html#home" class="block py-2 text-gray-300 hover:text-white">Home</a>
+            <a href="index.html#about" class="block py-2 text-gray-300 hover:text-white">About</a>
+            <a href="index.html#courses" class="block py-2 text-gray-300 hover:text-white">Courses</a>
+            <a href="index.html#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+            <a href="#" class="block mt-2 bg-indigo-600 text-white text-center px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Body Section -->
+    <main class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                 <a href="sem1.html" class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"><i class="fas fa-arrow-left mr-2"></i> Back to Semester Courses</a>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white">Deep Dive into Computer Organization</h1>
+                <p class="text-lg text-gray-400 mt-2 max-w-3xl mx-auto">Explore the hardware and software interface, understanding how a computer system works from the inside out.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-12">
+                <!-- Introduction -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">1. What is Computer Organization?</h2>
+                    <p class="text-gray-300 leading-relaxed">Computer Organization refers to the operational units and their interconnections that realize the architectural specifications. It describes how the hardware components are structured to form a computer system. While computer architecture deals with *what* the computer does (the programmer's view), organization deals with *how* it does it (the engineer's view). For example, architecture might specify that there is a multiplication instruction. Organization would define how that instruction is implemented: is it done by a dedicated hardware multiplier, or by repeated addition using the ALU? It's the bridge between hardware and software.</p>
+                </section>
+
+                <!-- Basic Components -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">2. Basic Components of a Computer</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">A computer system is primarily composed of three main components connected by buses (wires that transmit data, addresses, and control signals):</p>
+                    <ul class="list-disc list-inside mt-4 text-gray-300 space-y-4">
+                        <li><strong>CPU (Central Processing Unit):</strong> The "brain" of the computer. It fetches instructions from memory, decodes them to figure out what they mean, and then executes them.
+                            <ul class="list-circle list-inside ml-6 mt-2 space-y-2">
+                                <li><strong>Arithmetic Logic Unit (ALU):</strong> The calculator of the CPU. It performs all arithmetic (add, subtract, multiply) and logical (AND, OR, NOT) operations.</li>
+                                <li><strong>Control Unit (CU):</strong> The director of the CPU. It generates control signals to manage the flow of information throughout the entire computer, ensuring instructions are executed in the correct sequence.</li>
+                                <li><strong>Registers:</strong> Extremely fast, small storage locations within the CPU used to hold data temporarily during processing (e.g., the current instruction, calculation results).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Main Memory (RAM):</strong> Stores data and instructions that are currently in use. It is volatile, meaning its contents are lost when the power is turned off. The CPU can directly read from and write to any location in main memory, hence the name "Random Access Memory."</li>
+                        <li><strong>I/O (Input/Output) Subsystem:</strong> Allows the computer to interact with the outside world. This includes not just devices like keyboards, mice, and monitors, but also the controllers and interfaces that connect them to the computer's main bus.</li>
+                    </ul>
+                </section>
+
+                <!-- Instruction Set Architecture (ISA) -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">3. Instruction Set Architecture (ISA)</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">The ISA is the part of the computer's architecture related to programming. It acts as the contract between the hardware and the software, defining everything a programmer needs to know to write machine-level code. Key aspects of an ISA include:</p>
+                     <ul class="list-disc list-inside mt-4 text-gray-300 space-y-2">
+                        <li><strong>Instruction Types:</strong> What operations the CPU can perform, such as data processing (add, subtract), data storage (load, store), and program control (branch, jump).</li>
+                        <li><strong>Registers:</strong> The number and types of general-purpose and special-purpose registers available to the programmer.</li>
+                        <li><strong>Data Types:</strong> The types of data the CPU can directly operate on (e.g., 8-bit integers, 32-bit floating-point numbers).</li>
+                        <li><strong>Addressing Modes:</strong> The different ways the CPU can calculate the memory address of an operand for an instruction (e.g., get data directly from the instruction, from a register, or from a memory location pointed to by a register).</li>
+                    </ul>
+                    <pre class="mt-4"><code class="language-assembly">; A simple assembly-like instruction
+MOV AX, 5    ; Move the value 5 into the AX register (Immediate Addressing)
+ADD AX, [BX] ; Add the value from the memory location pointed to by register BX to AX (Register Indirect Addressing)</code></pre>
+                </section>
+
+                <!-- Memory Hierarchy -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">4. Memory Hierarchy</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">No single memory technology can provide the best of all worlds (fastest speed, largest capacity, and cheapest cost). Therefore, computer memory is organized into a hierarchy to provide the best performance at a reasonable cost. This design works because of a principle called **Locality of Reference**, which states that programs tend to access data and instructions near those they have recently accessed.</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2 mb-4">
+                        <li><strong>Level 1: Registers:</strong> Fastest, smallest, most expensive. Located inside the CPU.</li>
+                        <li><strong>Level 2: Cache Memory:</strong> A small, fast memory that stores frequently used data from main memory. Caches are crucial for performance, acting as a buffer between the fast CPU and slower RAM.</li>
+                        <li><strong>Level 3: Main Memory (RAM):</strong> The primary working memory. Much larger than cache but also slower.</li>
+                        <li><strong>Level 4: Secondary Storage:</strong> Non-volatile storage like SSDs and HDDs for long-term data storage. Slowest and cheapest per byte.</li>
+                    </ul>
+                </section>
+
+                <!-- Pipelining -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">5. Pipelining</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">Pipelining is a technique where multiple instructions are overlapped in execution, much like an assembly line. The process of executing an instruction is broken down into stages. A typical 5-stage pipeline includes:</p>
+                    <ol class="list-decimal list-inside text-gray-300 space-y-2 mb-4">
+                        <li><strong>Instruction Fetch (IF):</strong> Get the instruction from memory.</li>
+                        <li><strong>Instruction Decode (ID):</strong> Decode the instruction and read registers.</li>
+                        <li><strong>Execute (EX):</strong> Perform the operation using the ALU.</li>
+                        <li><strong>Memory Access (MEM):</strong> Read or write data from/to main memory.</li>
+                        <li><strong>Write Back (WB):</strong> Write the result back into a register.</li>
+                    </ol>
+                    <p class="text-gray-300 leading-relaxed">By overlapping these stages for different instructions, the CPU can ideally complete one instruction every clock cycle, significantly boosting its throughput (the number of instructions completed per unit of time).</p>
+                </section>
+                
+                <!-- Input/Output Systems -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">6. Input/Output (I/O) Systems</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">The I/O system manages how the CPU communicates with peripheral devices, which are often much slower than the CPU and memory. The goal is to handle these speed differences efficiently.</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2 mb-4">
+                        <li><strong>Programmed I/O:</strong> The CPU continuously polls the device to see if it's ready. This is simple but highly inefficient as it keeps the CPU busy doing nothing but waiting.</li>
+                        <li><strong>Interrupt-driven I/O:</strong> The I/O device sends a signal (an interrupt) to the CPU when it's ready for a data transfer. This allows the CPU to perform other tasks while the device is busy, improving efficiency. This is how keyboards and mice typically operate.</li>
+                        <li><strong>Direct Memory Access (DMA):</strong> For large data transfers (like reading a file from an SSD), a special DMA controller takes over. It manages the data transfer directly between the I/O device and main memory, freeing the CPU to execute other instructions. This is the most efficient method for bulk data movement.</li>
+                    </ul>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+      <!-- Timer Display -->
+    <div id="timer-display"
+        class="hidden fixed bottom-5 right-5 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-2xl border border-indigo-500/50">
+
+        <p class="text-sm">Time on <strong id="section-name" class="text-indigo-400"></strong>: <span id="time-spent"
+        class="font-mono font-bold"></span></p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-indigo-500">Educa</h3>
+                    <p class="text-gray-400">Your journey to knowledge starts here. We are committed to providing the best learning experience.</p>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="index.html#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li class="mb-2"><a href="index.html#courses" class="text-gray-400 hover:text-white">Courses</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                 <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Contact Us</h4>
+                    <ul>
+                        <li class="mb-2 flex items-center"><i class="fas fa-map-marker-alt mr-2 text-indigo-500"></i> 123 Education Lane, Learning City</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-envelope mr-2 text-indigo-500"></i> contact@educa.com</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-phone mr-2 text-indigo-500"></i> +1 234 567 890</li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div>
+                     <h4 class="text-lg font-semibold mb-4 text-white">Follow Us</h4>
+                     <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in text-xl"></i></a>
+                     </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Educa. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <script src="timer.js"></script>
+
+</body>
+</html>
+

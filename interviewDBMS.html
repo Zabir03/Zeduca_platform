@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBMS - Educa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .content-section h2 {
+            border-left: 4px solid #6366f1; /* indigo-500 */
+            padding-left: 1rem;
+        }
+        .code-block {
+            background-color: #111827; /* A darker gray for code */
+            color: #93c5fd; /* A light blue for text */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header Section -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-indigo-500">Educa</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#home" class="text-gray-300 hover:text-white font-medium">Home</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-white font-medium">About</a>
+                <a href="index.html#courses" class="text-gray-300 hover:text-white font-medium">Courses</a>
+                <a href="index.html#contact" class="text-gray-300 hover:text-white font-medium">Contact</a>
+            </div>
+            <a href="#" class="hidden md:block bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">Get Started</a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl text-indigo-500"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-6 pt-2 pb-4">
+            <a href="index.html#home" class="block py-2 text-gray-300 hover:text-white">Home</a>
+            <a href="index.html#about" class="block py-2 text-gray-300 hover:text-white">About</a>
+            <a href="index.html#courses" class="block py-2 text-gray-300 hover:text-white">Courses</a>
+            <a href="index.html#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+            <a href="#" class="block mt-2 bg-indigo-600 text-white text-center px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Body Section -->
+    <main class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <a href="dbms.html" class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"><i class="fas fa-arrow-left mr-2"></i> Back to Courses</a>
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-white">The Complete Guide to DBMS</h1>
+                    <p class="text-lg text-gray-400 mt-2">Database Management Systems concepts for placement interviews.</p>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl shadow-2xl p-8 md:p-12 space-y-12 content-section">
+                    
+                    <!-- 1. Introduction to DBMS -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">1. What is a DBMS — goals & architecture</h2>
+                        <p class="text-gray-400 leading-relaxed"><strong>Definition:</strong> Software that stores, retrieves, and manages data in databases while providing concurrency, integrity, security, and recovery.</p>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Main goals:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Data independence (apps don’t depend on storage details)</li>
+                            <li>Efficient data access (indexes, query optimizer)</li>
+                            <li>Data integrity & constraints</li>
+                            <li>Concurrent multi-user access</li>
+                            <li>Recovery from crashes</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Architectures:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>1-Tier:</strong> DB + app on same machine (simple).</li>
+                            <li><strong>2-Tier:</strong> Client ↔ DB server (desktop apps).</li>
+                            <li><strong>3-Tier:</strong> Client ↔ App server ↔ DB server (web apps). App server handles business logic.</li>
+                            <li><strong>N-Tier/Distributed:</strong> Multiple DB nodes, replication, sharding.</li>
+                        </ul>
+                    </section>
+                    
+                    <!-- 2. Data models & ER modeling -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">2. Data models & ER modeling</h2>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Common models:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>Relational (tables/tuples):</strong> most used in RDBMS (MySQL, PostgreSQL).</li>
+                            <li><strong>ER (conceptual):</strong> entities, attributes, relationships — used for design.</li>
+                            <li><strong>NoSQL models:</strong> document, key-value, column-family, graph.</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">ER → Relational mapping:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                           <li><strong>Entity →</strong> Table (each attribute → column)</li>
+                           <li><strong>1:N relationship →</strong> include foreign key in N-side table</li>
+                           <li><strong>M:N relationship →</strong> create join table with foreign keys</li>
+                        </ul>
+                    </section>
+
+                    <!-- 3. Keys & Constraints -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">3. Keys & Constraints</h2>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>Primary Key:</strong> unique identifier.</li>
+                            <li><strong>Candidate Key:</strong> minimal unique attribute set.</li>
+                            <li><strong>Foreign Key:</strong> enforces referential integrity to other table’s PK.</li>
+                            <li><strong>Constraints:</strong> Unique, Not Null, Check, Default.</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Example SQL:</h3>
+                        <pre class="code-block"><code>CREATE TABLE Student (
+  sid INT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Enroll (
+  sid INT,
+  cid INT,
+  grade CHAR(2),
+  PRIMARY KEY (sid, cid),
+  FOREIGN KEY (sid) REFERENCES Student(sid)
+);</code></pre>
+                    </section>
+                    
+                    <!-- 5. SQL -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">5. SQL — DDL / DML / DCL / TCL</h2>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>DDL:</strong> CREATE, ALTER, DROP</li>
+                            <li><strong>DML:</strong> INSERT, UPDATE, DELETE</li>
+                            <li><strong>DQL:</strong> SELECT</li>
+                            <li><strong>TCL:</strong> COMMIT, ROLLBACK, SAVEPOINT</li>
+                            <li><strong>DCL:</strong> GRANT, REVOKE</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Joins:</h3>
+                        <pre class="code-block"><code>-- Inner join
+SELECT s.name, c.title
+FROM Student s
+JOIN Enroll e ON s.sid = e.sid
+JOIN Course c ON e.cid = c.cid;
+
+-- Left join
+SELECT s.name, c.title
+FROM Student s
+LEFT JOIN Enroll e ON s.sid = e.sid;</code></pre>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Group / Having / Aggregate:</h3>
+                         <pre class="code-block"><code>SELECT cid, COUNT(*) AS students
+FROM Enroll
+GROUP BY cid
+HAVING COUNT(*) > 10;</code></pre>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Window functions:</h3>
+                        <pre class="code-block"><code>SELECT sid, cid, grade,
+       RANK() OVER (PARTITION BY cid ORDER BY grade DESC) AS rank
+FROM Enroll;</code></pre>
+                    </section>
+
+                    <!-- 6. Normalization -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">6. Normalization</h2>
+                        <p class="text-gray-400 leading-relaxed"><strong>Goal:</strong> remove redundancy, avoid anomalies (insert/update/delete).</p>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Normal forms:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>1NF:</strong> atomic attributes (no repeating groups).</li>
+                            <li><strong>2NF:</strong> 1NF + no partial dependency on part of composite PK.</li>
+                            <li><strong>3NF:</strong> 2NF + no transitive dependency.</li>
+                            <li><strong>BCNF:</strong> every determinant is a candidate key.</li>
+                        </ul>
+                    </section>
+
+                    <!-- 7. Transactions, ACID & Isolation -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">7. Transactions, ACID & Isolation</h2>
+                        <p class="text-gray-400 leading-relaxed"><strong>Transaction:</strong> atomic unit of DB work.</p>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">ACID Properties:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                           <li><strong>Atomicity:</strong> all or nothing.</li>
+                           <li><strong>Consistency:</strong> DB moves between valid states.</li>
+                           <li><strong>Isolation:</strong> transactions appear isolated.</li>
+                           <li><strong>Durability:</strong> committed changes survive crash.</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Isolation Levels:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>READ UNCOMMITTED</li>
+                            <li>READ COMMITTED</li>
+                            <li>REPEATABLE READ</li>
+                            <li>SERIALIZABLE</li>
+                        </ul>
+                    </section>
+                    
+                    <!-- 9. Indexes -->
+                     <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">9. Indexes</h2>
+                        <p class="text-gray-400 leading-relaxed"><strong>Why:</strong> speed up lookups, sorting, range queries. Tradeoff: extra storage + slower writes/updates.</p>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Types:</h3>
+                         <ul class="list-disc list-inside text-gray-400 space-y-2">
+                             <li><strong>B+-Tree index:</strong> good for range queries. Most RDBMS use B+ trees.</li>
+                             <li><strong>Hash index:</strong> O(1) equality lookups, not good for range queries.</li>
+                             <li><strong>Clustered index:</strong> table stored in index order (one per table).</li>
+                             <li><strong>Non-clustered:</strong> separate index structure with pointers to data rows.</li>
+                         </ul>
+                    </section>
+                    
+                    <!-- 14. NoSQL, CAP theorem, BASE -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">14. NoSQL, CAP theorem, BASE</h2>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">NoSQL types:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                           <li><strong>Key-Value (Redis):</strong> super fast for simple retrieval.</li>
+                           <li><strong>Document (MongoDB):</strong> JSON-like flexible schema.</li>
+                           <li><strong>Column-family (Cassandra):</strong> wide rows, good for time-series.</li>
+                           <li><strong>Graph (Neo4j):</strong> relationships-first queries.</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">CAP Theorem:</h3>
+                        <p class="text-gray-400 leading-relaxed">In a partitioned system you can guarantee only two of: <strong>C</strong>onsistency, <strong>A</strong>vailability, <strong>P</strong>artition-tolerance.</p>
+                         <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">BASE:</h3>
+                        <p class="text-gray-400 leading-relaxed">Basically Available, Soft state, Eventual consistency — looser than strict ACID for higher availability.</p>
+                    </section>
+
+                    <!-- Common Interview Questions -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">🎯 Common Interview Questions</h2>
+                         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                            <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                <li>Normal Forms: 1NF/2NF/3NF/BCNF</li>
+                                <li>ACID vs BASE</li>
+                                <li>Indexes: clustered vs non-clustered</li>
+                                <li>Joins: nested loop vs hash join vs merge join</li>
+                                <li>Transaction anomalies: dirty read, non-repeatable read, phantom</li>
+                                <li>Locking: shared vs exclusive; deadlock detection</li>
+                            </ul>
+                            <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                <li>Backup types: full, incremental, differential</li>
+                                <li>Sharding vs Replication</li>
+                                <li>SQL Practice Problems</li>
+                                <li>Transaction Serializability Tests</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+      <!-- Timer Display -->
+    <div id="timer-display"
+        class="hidden fixed bottom-5 right-5 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-2xl border border-indigo-500/50">
+
+        <p class="text-sm">Time on <strong id="section-name" class="text-indigo-400"></strong>: <span id="time-spent"
+        class="font-mono font-bold"></span></p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    
+                    <h3 class="text-2xl font-bold mb-4 text-indigo-500">Educa</h3>
+                    <p class="text-gray-400">Your journey to knowledge starts here. We are committed to providing the best learning experience.</p>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="index.html#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li class="mb-2"><a href="index.html#courses" class="text-gray-400 hover:text-white">Courses</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                 <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Contact Us</h4>
+                    <ul>
+                        <li class="mb-2 flex items-center"><i class="fas fa-map-marker-alt mr-2 text-indigo-500"></i> 123 Education Lane, Learning City</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-envelope mr-2 text-indigo-500"></i> contact@educa.com</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-phone mr-2 text-indigo-500"></i> +1 234 567 890</li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div>
+                     <h4 class="text-lg font-semibold mb-4 text-white">Follow Us</h4>
+                     <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in text-xl"></i></a>
+                     </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Educa. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <script src="timer.js"></script>
+
+</body>
+</html>

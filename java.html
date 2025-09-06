@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Language Tutorial - Educa</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="java.css">
+</head>
+
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header Section -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center relative">
+            <a href="index.html" class="text-3xl font-bold text-indigo-500">Educa</a>
+            <div class="hidden md:flex items-center space-x-8 absolute left-1/2 -translate-x-1/2">
+                <a href="index.html#home" class="text-gray-300 hover:text-white font-medium">Home</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-white font-medium">About</a>
+                <a href="index.html#courses" class="text-gray-300 hover:text-white font-medium">Courses</a>
+                <a href="index.html#contact" class="text-gray-300 hover:text-white font-medium">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl text-indigo-500"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-6 pt-2 pb-4">
+            <a href="index.html#home" class="block py-2 text-gray-300 hover:text-white">Home</a>
+            <a href="index.html#about" class="block py-2 text-gray-300 hover:text-white">About</a>
+            <a href="index.html#courses" class="block py-2 text-gray-300 hover:text-white">Courses</a>
+            <a href="index.html#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Body -->
+    <div class="container mx-auto px-6 py-12 flex flex-col md:flex-row gap-8">
+
+        <!-- Sidebar -->
+        <aside class="w-full md:w-1/4 lg:w-1/5">
+            <div class="bg-gray-800 rounded-lg p-4 sticky top-24">
+                <h2 class="text-xl font-bold text-white mb-4">Java Topics</h2>
+                <nav id="sidebar-nav" class="flex flex-row md:flex-col overflow-x-auto no-scrollbar pb-4 md:pb-0">
+                    <a href="#" class="sidebar-link active" data-target="intro-java">Introduction</a>
+                    <a href="#" class="sidebar-link" data-target="structure-java">Basic Structure</a>
+                    <a href="#" class="sidebar-link" data-target="datatypes-java">Variables & Data Types</a>
+                    <a href="#" class="sidebar-link" data-target="operators-java">Operators</a>
+                    <a href="#" class="sidebar-link" data-target="control-java">Control Flow</a>
+                    <a href="#" class="sidebar-link" data-target="arrays-java">Arrays & Strings</a>
+                    <a href="#" class="sidebar-link" data-target="methods-java">Methods</a>
+                    <a href="#" class="sidebar-link" data-target="oop-java">OOP Concepts</a>
+                    <a href="#" class="sidebar-link" data-target="classes-java">Classes & Objects</a>
+                    <a href="#" class="sidebar-link" data-target="constructors-java">Constructors</a>
+                    <a href="#" class="sidebar-link" data-target="inheritance-java">Inheritance</a>
+                    <a href="#" class="sidebar-link" data-target="poly-java">Polymorphism</a>
+                    <a href="#" class="sidebar-link" data-target="abstract-java">Abstraction</a>
+                    <a href="#" class="sidebar-link" data-target="encap-java">Encapsulation</a>
+                    <a href="#" class="sidebar-link" data-target="exceptions-java">Exception Handling</a>
+                    <a href="#" class="sidebar-link" data-target="collections-java">Collections</a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main id="main-content" class="w-full md:w-3/4 lg:w-4/5">
+            <a href="lang.html" class="text-indigo-400 hover:text-indigo-300 mb-6 inline-block">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Languages
+            </a>
+            <div class="bg-gray-800 rounded-lg shadow-lg p-8 md:p-12">
+
+                <!-- Content Sections -->
+                <div id="intro-java" class="content-section space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Introduction to Java</h2>
+                    <p class="text-gray-400 text-lg">Java is a high-level, class-based, object-oriented programming
+                        language...</p>
+                </div>
+
+                <div id="structure-java" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Basic Structure of a Java Program</h2>
+                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code class="language-java">public class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello, World!");
+  }
+}<</code></pre>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <li><code>public class Main</code>: Every application must have at least one class definition.
+                            The class name should match the filename (Main.java).</li>
+                        <li><code>public static void main(String[] args)</code>: This is the main method. It's public,
+                            static (belongs to the class, not an object), returns nothing (void), and accepts an array
+                            of strings as arguments.</li>
+                        <li><code>System.out.println()</code>: A built-in method to print text to the console.</li>
+                    </ul>
+                </div>
+                <div id="datatypes-java" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Variables & Data Types</h2>
+                    <p class="text-gray-400">Java has two categories of data types: primitive types and reference types.
+                    </p>
+                    <h3 class="text-2xl font-bold text-indigo-400 pt-2">Primitive Data Types</h3>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <li><strong>Numeric Types:</strong> byte, short, int, long (for integers); float, double (for
+                            floating-point numbers).</li>
+                        <li><strong>Character Type:</strong> char for single characters.</li>
+                        <li><strong>Boolean Type:</strong> boolean for true or false values.</li>
+                    </ul>
+                    <h3 class="text-2xl font-bold text-indigo-400 pt-2">Reference Data Types</h3>
+                    <p class="text-gray-400">These refer to objects. Examples include String, Arrays, and any Class you
+                        create. They hold a memory address of an object rather than the object itself.</p>
+                </div>
+                <div id="operators-java" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Operators</h2>
+                    <p class="text-gray-400">Java supports a rich set of operators to perform operations on variables.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <li><strong>Arithmetic:</strong> +, -, *, /, %</li>
+                        <li><strong>Relational:</strong> ==, !=, > <,>=, <=< /li>
+                        <li><strong>Logical:</strong> && (AND), || (OR), ! (NOT)</li>
+                        <li><strong>Assignment:</strong> =, +=, -=</li>
+                    </ul>
+                </div>
+                <div id="control-java" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Control Flow</h2>
+                    <p class="text-gray-400">Control the flow of your program using conditional statements and loops.
+                    </p>
+                    <h3 class="text-2xl font-bold text-indigo-400 pt-2">Conditionals and Loops</h3>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <li><strong>Conditionals:</strong> if-else, if-else-if, switch</li>
+                        <li><strong>Loops:</strong> for, while, do-while, and the enhanced for-each loop for iterating
+                            over collections.</li>
+                    </ul>
+                </div>
+                <div id="arrays-java" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Arrays & Strings</h2>
+                    <p class="text-gray-400">Arrays are used to store multiple values in a single variable. A String in
+                        Java is an object that represents a sequence of characters.</p>
+                    <pre
+                        class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code class="language-java">int[] numbers = {10, 20, 30, 40}; String greeting = "Hello Java"; System.out.println(numbers[0]); // Access first element System.out.println(greeting.length()); // Use String methods </code></pre>
+                </div>
+                <div id="methods-java" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Methods</h2>
+                    <p class="text-gray-400">A method is a block of code which only runs when it is called. You can pass
+                        data, known as parameters, into a method.</p>
+                </div>
+                <div id="oop-java" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">OOP Concepts</h2>
+                    <p class="text-gray-400">Java is built on the principles of Object-Oriented Programming, which help
+                        create modular, flexible, and reusable code.</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <li><strong>Encapsulation:</strong> Hiding data within a class.</li>
+                        <li><strong>Abstraction:</strong> Hiding implementation details.</li>
+                        <li><strong>Inheritance:</strong> Reusing code from other classes.</li>
+                        <li><strong>Polymorphism:</strong> Allowing objects to take many forms.</li>
+                    </ul>
+                </div>
+                <div id="classes-java" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Classes & Objects</h2>
+                    <p class="text-gray-400">A class is a blueprint from which objects are created. An object is an
+                        instance of a class, with its own state (fields) and behavior (methods).</p>
+                </div>
+                <div id="constructors-java" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Constructors</h2>
+                    <p class="text-gray-400">A constructor is a special method that is used to initialize objects. It is
+                        called when an object of a class is created.</p>
+                </div>
+                <div id="inheritance-java" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Inheritance</h2>
+                    <p class="text-gray-400">Inheritance allows one class (subclass) to acquire the properties and
+                        methods of another class (superclass). This is achieved using the extends keyword.</p>
+                </div>
+                <div id="poly-java" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Polymorphism</h2>
+                    <p class="text-gray-400">Polymorphism means "many forms". In Java, it allows us to perform a single
+                        action in different ways. It is achieved through method overloading (compile-time) and method
+                        overriding (run-time).</p>
+                </div>
+                <div id="abstract-java" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Abstraction</h2>
+                    <p class="text-gray-400">Abstraction is the process of hiding the implementation details and showing
+                        only functionality to the user. It can be achieved with abstract classes and interfaces.</p>
+                </div>
+                <div id="encap-java" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Encapsulation</h2>
+                    <p class="text-gray-400">Encapsulation is the wrapping of data (variables) and code acting on the
+                        data (methods) together as a single unit. It's achieved by declaring variables as private and
+                        providing public getter and setter methods.</p>
+                </div>
+                <div id="exceptions-java" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Exception Handling</h2>
+                    <p class="text-gray-400">Java's exception handling is a powerful mechanism to handle runtime errors.
+                        It uses try, catch, finally, throw, and throws keywords.</p>
+                </div>
+                <div id="collections-java" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Collections Framework</h2>
+                    <p class="text-gray-400">The Java Collections Framework provides an architecture to store and
+                        manipulate groups of objects. It includes interfaces like List, Set, Map and implementations
+                        like ArrayList, HashSet, and HashMap.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+      <!-- Timer Display -->
+    <div id="timer-display"
+        class="hidden fixed bottom-5 right-5 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-2xl border border-indigo-500/50">
+
+        <p class="text-sm">Time on <strong id="section-name" class="text-indigo-400"></strong>: <span id="time-spent"
+        class="font-mono font-bold"></span></p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-indigo-500">Educa</h3>
+                    <p class="text-gray-400">Your journey to knowledge starts here.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="index.html#courses" class="text-gray-400 hover:text-white">Courses</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Contact Us</h4>
+                    <ul>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2 text-indigo-500"></i>
+                            Learning City</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2 text-indigo-500"></i>
+                            contact@educa.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Educa. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="java.js"></script>
+    <script src="timer.js"> </script>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Mathematics I - Educa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .topic-section {
+            transition: box-shadow 0.3s ease;
+        }
+        .topic-section:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+        pre {
+            background-color: #1a202c; /* A slightly darker gray */
+            border-left: 4px solid #6366f1; /* Indigo border */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            color: #e2e8f0; /* Lighter text for contrast */
+            font-family: 'Fira Code', 'Courier New', monospace;
+        }
+        code {
+            font-family: 'Fira Code', 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header Section -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-indigo-500">Zeduca</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#home" class="text-gray-300 hover:text-white font-medium">Home</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-white font-medium">About</a>
+                <a href="index.html#courses" class="text-gray-300 hover:text-white font-medium">Courses</a>
+                <a href="index.html#contact" class="text-gray-300 hover:text-white font-medium">Contact</a>
+            </div>
+            <a href="login.html" class="hidden md:block bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">Get Started</a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl text-indigo-500"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-6 pt-2 pb-4">
+            <a href="index.html#home" class="block py-2 text-gray-300 hover:text-white">Home</a>
+            <a href="index.html#about" class="block py-2 text-gray-300 hover:text-white">About</a>
+            <a href="index.html#courses" class="block py-2 text-gray-300 hover:text-white">Courses</a>
+            <a href="index.html#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+            <a href="#" class="block mt-2 bg-indigo-600 text-white text-center px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Body Section -->
+    <main class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                 <a href="sem1.html" class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"><i class="fas fa-arrow-left mr-2"></i> Back to Semester Courses</a>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white">Deep Dive into Engineering Mathematics I</h1>
+                <p class="text-lg text-gray-400 mt-2 max-w-3xl mx-auto">Mastering the mathematical tools and techniques that form the bedrock of modern engineering.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-12">
+                <!-- Introduction -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">1. What is Engineering Mathematics?</h2>
+                    <p class="text-gray-300 leading-relaxed">Engineering Mathematics is a branch of applied mathematics that deals with the mathematical methods and techniques used in engineering and industry. It provides the essential language and tools for modeling, analyzing, and solving complex real-world problems. This foundational course focuses on calculus and linear algebra, which are indispensable for all engineering disciplines.</p>
+                </section>
+
+                <!-- Matrices -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">2. Matrices and Linear Algebra</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">Matrices provide a powerful way to represent and solve systems of linear equations, which appear frequently in engineering analysis (e.g., circuit analysis, structural analysis). Key topics include:</p>
+                    <ul class="list-disc list-inside mt-4 text-gray-300 space-y-2">
+                        <li><strong>Systems of Linear Equations:</strong> Using methods like Gaussian elimination to find solutions.</li>
+                        <li><strong>Matrix Operations:</strong> Addition, subtraction, multiplication, and transpose of matrices.</li>
+                        <li><strong>Determinants and Inverses:</strong> Calculating determinants and finding the inverse of a matrix, which is crucial for solving linear systems.</li>
+                        <li><strong>Eigenvalues and Eigenvectors:</strong> These are special values and vectors associated with a linear system that have important applications in vibration analysis, data analysis, and quantum mechanics.</li>
+                    </ul>
+                </section>
+
+                <!-- Differential Calculus -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">3. Differential Calculus</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">Differential calculus is the study of rates of change. It helps us understand how functions behave and is used to find optima (maximums and minimums), which is essential for design and optimization problems in engineering.</p>
+                     <ul class="list-disc list-inside mt-4 text-gray-300 space-y-2">
+                        <li><strong>Limits and Continuity:</strong> The foundational concepts upon which calculus is built.</li>
+                        <li><strong>Derivatives:</strong> Finding the instantaneous rate of change of a function. Rules of differentiation (product rule, quotient rule, chain rule) are key techniques.</li>
+                        <li><strong>Applications of Derivatives:</strong> Analyzing function behavior, finding maximum and minimum values, and solving related rates problems.</li>
+                        <li><strong>Partial Differentiation:</strong> Extending the concept of derivatives to functions of multiple variables, which is necessary for modeling multi-dimensional systems.</li>
+                    </ul>
+                </section>
+
+                <!-- Integral Calculus -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">4. Integral Calculus</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">Integral calculus is the reverse process of differentiation. It is used to find the accumulation of quantities, such as areas under curves, volumes of solids, and the total work done by a variable force.</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2 mb-4">
+                        <li><strong>Indefinite and Definite Integrals:</strong> Finding anti-derivatives and calculating the area under a curve between two points.</li>
+                        <li><strong>The Fundamental Theorem of Calculus:</strong> The crucial link that connects differentiation and integration.</li>
+                        <li><strong>Techniques of Integration:</strong> Methods like integration by parts, substitution, and partial fractions to solve complex integrals.</li>
+                        <li><strong>Multiple Integrals:</strong> Extending integration to multiple dimensions to calculate volumes, surface areas, and mass of complex objects.</li>
+                    </ul>
+                </section>
+
+                <!-- Vector Calculus -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">5. Vector Calculus</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">Vector calculus extends calculus to vector fields (functions that assign a vector to each point in space). It is the fundamental language used in electromagnetism, fluid dynamics, and mechanics.</p>
+                     <ul class="list-disc list-inside text-gray-300 space-y-2 mb-4">
+                        <li><strong>Vector Operations:</strong> Dot product and cross product.</li>
+                        <li><strong>Line and Surface Integrals:</strong> Integrating functions along curves and over surfaces.</li>
+                        <li><strong>Gradient, Divergence, and Curl:</strong> Vector operators that describe the behavior of vector fields, such as the direction of steepest ascent (gradient) or the rotation of a fluid (curl).</li>
+                        <li><strong>Fundamental Theorems:</strong> Green's Theorem, Stokes' Theorem, and the Divergence Theorem, which relate integrals over different dimensions and are essential in physics and engineering.</li>
+                    </ul>
+                </section>
+                
+                <!-- Ordinary Differential Equations (ODEs) -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">6. Ordinary Differential Equations (ODEs)</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">An ODE is an equation that involves an unknown function and its derivatives. They are used to model dynamic systems that change over time, such as electrical circuits (RLC circuits), mechanical vibrations, and heat transfer.</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2 mb-4">
+                        <li><strong>First-Order ODEs:</strong> Solving separable, linear, and exact equations.</li>
+                        <li><strong>Second-Order Linear ODEs:</strong> Solving homogeneous and non-homogeneous equations with constant coefficients, which are particularly important for modeling oscillations and vibrations.</li>
+                        <li><strong>Applications:</strong> Applying these techniques to model and solve real-world engineering problems.</li>
+                    </ul>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+      <!-- Timer Display -->
+    <div id="timer-display"
+        class="hidden fixed bottom-5 right-5 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-2xl border border-indigo-500/50">
+
+        <p class="text-sm">Time on <strong id="section-name" class="text-indigo-400"></strong>: <span id="time-spent"
+        class="font-mono font-bold"></span></p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-indigo-500">Zeduca</h3>
+                    <p class="text-gray-400">Your journey to knowledge starts here. We are committed to providing the best learning experience.</p>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="index.html#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li class="mb-2"><a href="index.html#courses" class="text-gray-400 hover:text-white">Courses</a></li>
+                        <li class="mb-2"><a href="feedback.html" class="text-gray-400 hover:text-white">Feedback</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                 <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Contact Us</h4>
+                    <ul>
+                        <li class="mb-2 flex items-center"><i class="fas fa-map-marker-alt mr-2 text-indigo-500"></i> 123 Education Lane, Learning City</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-envelope mr-2 text-indigo-500"></i> contact@educa.com</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-phone mr-2 text-indigo-500"></i> +1 234 567 890</li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div>
+                     <h4 class="text-lg font-semibold mb-4 text-white">Follow Us</h4>
+                     <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in text-xl"></i></a>
+                     </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Educa. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <script src="timer.js"></script>
+
+</body>
+</html>

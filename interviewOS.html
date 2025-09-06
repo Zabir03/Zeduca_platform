@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operating System - Educa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .content-section h2 {
+            border-left: 4px solid #6366f1; /* indigo-500 */
+            padding-left: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header Section -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-indigo-500">Zeduca</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#home" class="text-gray-300 hover:text-white font-medium">Home</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-white font-medium">About</a>
+                <a href="index.html#courses" class="text-gray-300 hover:text-white font-medium">Courses</a>
+                <a href="index.html#contact" class="text-gray-300 hover:text-white font-medium">Contact</a>
+            </div>
+            <a href="#" class="hidden md:block bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">Get Started</a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl text-indigo-500"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-6 pt-2 pb-4">
+            <a href="index.html#home" class="block py-2 text-gray-300 hover:text-white">Home</a>
+            <a href="index.html#about" class="block py-2 text-gray-300 hover:text-white">About</a>
+            <a href="index.html#courses" class="block py-2 text-gray-300 hover:text-white">Courses</a>
+            <a href="index.html#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+            <a href="#" class="block mt-2 bg-indigo-600 text-white text-center px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Body Section -->
+    <main class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <a href="operatingS.html" class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"><i class="fas fa-arrow-left mr-2"></i> Back to Courses</a>
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-white">The Complete Guide to Operating Systems</h1>
+                    <p class="text-lg text-gray-400 mt-2">Core concepts for interviews and beyond.</p>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl shadow-2xl p-8 md:p-12 space-y-12 content-section">
+                    
+                    <!-- 1. Introduction to OS -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">1. Introduction to OS</h2>
+                        <h3 class="text-xl font-semibold text-indigo-400 mb-2">Definition:</h3>
+                        <p class="text-gray-400 leading-relaxed">An OS is a system software that manages hardware and software resources, and provides services to applications and users.</p>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Functions:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Process management</li>
+                            <li>Memory management</li>
+                            <li>File management</li>
+                            <li>I/O management</li>
+                            <li>Security & Protection</li>
+                            <li>User interface (CLI, GUI)</li>
+                        </ul>
+                        <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>What is an OS?</li>
+                                <li>Functions of OS.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 2. Types of Operating Systems -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">2. Types of Operating Systems</h2>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>Batch OS:</strong> executes jobs in batches (no interaction).</li>
+                            <li><strong>Multiprogramming OS:</strong> multiple programs in memory.</li>
+                            <li><strong>Multitasking OS:</strong> multiple tasks at once (Windows, Linux).</li>
+                            <li><strong>Time-sharing OS:</strong> CPU time divided among users.</li>
+                            <li><strong>Distributed OS:</strong> multiple systems work together.</li>
+                            <li><strong>Real-time OS:</strong> strict deadlines (aircraft, robotics).</li>
+                        </ul>
+                        <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Difference between multiprogramming, multitasking, and multiprocessing.</li>
+                                <li>Real-time OS examples.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 3. Process Management -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">3. Process Management</h2>
+                        <p class="text-gray-400 leading-relaxed"><strong>Process</strong> = Program in execution.</p>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Process States:</h3>
+                        <p class="text-gray-400 leading-relaxed">New → Ready → Running → Waiting → Terminated</p>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">PCB (Process Control Block):</h3>
+                        <p class="text-gray-400 leading-relaxed">Stores process info (PID, registers, state).</p>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Threads:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>User-level threads:</strong> fast but no kernel support.</li>
+                            <li><strong>Kernel-level threads:</strong> managed by OS, slower.</li>
+                        </ul>
+                        <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Difference between process and thread.</li>
+                                <li>What is PCB?</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 4. CPU Scheduling -->
+                    <section>
+                         <h2 class="text-3xl font-bold text-white mb-4">4. CPU Scheduling</h2>
+                         <p class="text-gray-400 leading-relaxed">Decides which process runs on CPU.</p>
+                         <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Scheduling Algorithms:</h3>
+                         <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>FCFS (First Come First Serve):</strong> Non-preemptive, simple. Drawback: Convoy effect.</li>
+                            <li><strong>SJF (Shortest Job First):</strong> Optimal but needs burst-time prediction.</li>
+                            <li><strong>Round Robin (RR):</strong> Preemptive, time slice.</li>
+                            <li><strong>Priority Scheduling:</strong> Starvation possible → Aging used.</li>
+                            <li>Multilevel Queue & Multilevel Feedback Queue</li>
+                         </ul>
+                         <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Difference between preemptive & non-preemptive scheduling.</li>
+                                <li>Which is best for time-sharing? (Ans: RR).</li>
+                                <li>Explain starvation & aging.</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- 5. Process Synchronization -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">5. Process Synchronization</h2>
+                        <p class="text-gray-400 leading-relaxed"><strong>Problem:</strong> Multiple processes may access shared resources → Race Condition.</p>
+                        <p class="text-gray-400 leading-relaxed mt-2"><strong>Critical Section:</strong> Section of code where shared resource is accessed.</p>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Solutions:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Peterson’s Algorithm</li>
+                            <li>Semaphores (binary, counting)</li>
+                            <li>Mutex</li>
+                            <li>Monitors</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Classic Problems:</h3>
+                         <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Producer-Consumer</li>
+                            <li>Dining Philosophers</li>
+                            <li>Readers-Writers</li>
+                         </ul>
+                         <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Explain race condition.</li>
+                                <li>Semaphore vs Mutex.</li>
+                                <li>Solve Dining Philosopher’s Problem.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 6. Deadlock -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">6. Deadlock</h2>
+                        <p class="text-gray-400 leading-relaxed"><strong>Deadlock:</strong> Processes wait forever for resources.</p>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Conditions (Coffman’s Conditions):</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Mutual Exclusion</li>
+                            <li>Hold & Wait</li>
+                            <li>No Preemption</li>
+                            <li>Circular Wait</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Handling:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>Prevention:</strong> break one condition.</li>
+                            <li><strong>Avoidance:</strong> Banker's Algorithm.</li>
+                            <li><strong>Detection & Recovery:</strong> periodically check cycles in resource graph.</li>
+                        </ul>
+                        <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Deadlock necessary conditions.</li>
+                                <li>Explain Banker’s Algorithm.</li>
+                                <li>Deadlock vs Starvation.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 7. Memory Management -->
+                    <section>
+                         <h2 class="text-3xl font-bold text-white mb-4">7. Memory Management</h2>
+                         <ul class="list-disc list-inside text-gray-400 space-y-2">
+                             <li>Logical vs Physical Address</li>
+                             <li>Swapping</li>
+                             <li><strong>Contiguous Allocation:</strong> Fixed & Dynamic Partitioning</li>
+                             <li><strong>Fragmentation:</strong> Internal (unused space inside partition), External (free memory scattered).</li>
+                             <li><strong>Paging:</strong> Divide memory into frames & process into pages. Uses page table.</li>
+                             <li><strong>Segmentation:</strong> Memory divided into logical segments (code, data, stack).</li>
+                             <li><strong>Virtual Memory:</strong> Demand Paging (load pages when needed).</li>
+                             <li><strong>Page Replacement Algorithms:</strong> FIFO, LRU (Least Recently Used), Optimal (theoretical best).</li>
+                         </ul>
+                         <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Paging vs Segmentation.</li>
+                                <li>Internal vs External fragmentation.</li>
+                                <li>Explain LRU page replacement.</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- 8. File Management -->
+                    <section>
+                         <h2 class="text-3xl font-bold text-white mb-4">8. File Management</h2>
+                         <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>File Attributes:</strong> name, type, size, permissions.</li>
+                            <li><strong>File Access Methods:</strong> Sequential, Direct (random), Indexed</li>
+                            <li><strong>Directory Structures:</strong> Single-level, Two-level, Tree-structured, Graph-structured</li>
+                         </ul>
+                         <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Explain different file allocation methods (Contiguous, Linked, Indexed).</li>
+                                <li>What is an inode?</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 9. I/O Management -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">9. I/O Management</h2>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                           <li><strong>I/O Devices:</strong> character vs block devices.</li>
+                           <li><strong>I/O Techniques:</strong> Programmed I/O, Interrupt-driven I/O, DMA (Direct Memory Access).</li>
+                        </ul>
+                        <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>What is DMA and why is it used?</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- 10. OS Security & Protection -->
+                     <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">10. OS Security & Protection</h2>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                           <li>Authentication (username/password, biometrics).</li>
+                           <li>Authorization (access rights).</li>
+                           <li>Access Control Matrix</li>
+                           <li>Encryption for secure storage.</li>
+                        </ul>
+                        <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Authentication vs Authorization.</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- HOT Interview Questions -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">🎯 HOT Interview Questions (OS)</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                            <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                <li>What are the functions of an OS?</li>
+                                <li>Difference between process and thread.</li>
+                                <li>Explain process states.</li>
+                                <li>What is PCB?</li>
+                                <li>Difference between preemptive and non-preemptive scheduling.</li>
+                                <li>Round Robin vs FCFS.</li>
+                                <li>Explain starvation and aging.</li>
+                                <li>What is a critical section?</li>
+                                <li>Semaphore vs Mutex.</li>
+                                <li>Deadlock conditions.</li>
+                            </ul>
+                            <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                <li>Explain Banker’s Algorithm.</li>
+                                <li>Paging vs Segmentation.</li>
+                                <li>Page replacement algorithms (FIFO, LRU).</li>
+                                <li>Internal vs External fragmentation.</li>
+                                <li>What is virtual memory?</li>
+                                <li>Explain DMA.</li>
+                                <li>Difference between file allocation methods.</li>
+                                <li>Inode in UNIX.</li>
+                                <li>Authentication vs Authorization.</li>
+                                <li>Difference between multitasking, multiprocessing, and multithreading.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+     <!-- Timer Display -->
+    <div id="timer-display"
+        class="hidden fixed bottom-5 right-5 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-2xl border border-indigo-500/50">
+
+        <p class="text-sm">Time on <strong id="section-name" class="text-indigo-400"></strong>: <span id="time-spent"
+        class="font-mono font-bold"></span></p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-indigo-500">Zeduca</h3>
+                    <p class="text-gray-400">Your journey to knowledge starts here. We are committed to providing the best learning experience.</p>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="index.html#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li class="mb-2"><a href="index.html#courses" class="text-gray-400 hover:text-white">Courses</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                 <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Contact Us</h4>
+                    <ul>
+                        <li class="mb-2 flex items-center"><i class="fas fa-map-marker-alt mr-2 text-indigo-500"></i> 123 Education Lane, Learning City</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-envelope mr-2 text-indigo-500"></i> contact@educa.com</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-phone mr-2 text-indigo-500"></i> +1 234 567 890</li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div>
+                     <h4 class="text-lg font-semibold mb-4 text-white">Follow Us</h4>
+                     <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in text-xl"></i></a>
+                     </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Educa. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <script src="timer.js"></script>
+
+</body>
+</html>

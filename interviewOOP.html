@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPs Concepts - Educa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .content-section h2 {
+            border-left: 4px solid #6366f1; /* indigo-500 */
+            padding-left: 1rem;
+        }
+        .code-block {
+            background-color: #111827; /* A darker gray for code */
+            color: #93c5fd; /* A light blue for text */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header Section -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-indigo-500">Zeduca</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#home" class="text-gray-300 hover:text-white font-medium">Home</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-white font-medium">About</a>
+                <a href="index.html#courses" class="text-gray-300 hover:text-white font-medium">Courses</a>
+                <a href="index.html#contact" class="text-gray-300 hover:text-white font-medium">Contact</a>
+            </div>
+            <a href="#" class="hidden md:block bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">Get Started</a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl text-indigo-500"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-6 pt-2 pb-4">
+            <a href="index.html#home" class="block py-2 text-gray-300 hover:text-white">Home</a>
+            <a href="index.html#about" class="block py-2 text-gray-300 hover:text-white">About</a>
+            <a href="index.html#courses" class="block py-2 text-gray-300 hover:text-white">Courses</a>
+            <a href="index.html#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+            <a href="#" class="block mt-2 bg-indigo-600 text-white text-center px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Body Section -->
+    <main class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <a href="oop.html" class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"><i class="fas fa-arrow-left mr-2"></i> Back to Courses</a>
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-white">The Complete Guide to OOPs</h1>
+                    <p class="text-lg text-gray-400 mt-2">Object-Oriented Programming concepts for placement interviews.</p>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl shadow-2xl p-8 md:p-12 space-y-12 content-section">
+                    
+                    <!-- 1. Introduction to OOP -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">1. Introduction to OOP</h2>
+                        <p class="text-gray-400 leading-relaxed"><strong>Definition:</strong> OOP is a programming paradigm based on objects which encapsulate data (attributes) and behavior (methods).</p>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Core concepts:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Class & Object</li>
+                            <li>Encapsulation</li>
+                            <li>Abstraction</li>
+                            <li>Inheritance</li>
+                            <li>Polymorphism</li>
+                        </ul>
+                        <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>What is OOP and why use it over procedural programming?</li>
+                                <li>Examples of OOP languages.</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- 2. Class and Object -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">2. Class and Object</h2>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>Class:</strong> Blueprint/template that defines attributes and methods.</li>
+                            <li><strong>Object:</strong> Instance of a class.</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Example in Java:</h3>
+                        <pre class="code-block"><code>class Car {
+    String color;
+    int speed;
+    void drive() {
+        System.out.println("Car is driving...");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Car c1 = new Car(); // Object creation
+        c1.color = "Red";
+        c1.speed = 100;
+        c1.drive();
+    }
+}</code></pre>
+                        <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Difference between class and object.</li>
+                                <li>How many objects can be created from a class?</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- 3. Encapsulation -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">3. Encapsulation</h2>
+                        <p class="text-gray-400 leading-relaxed">Wrapping data (variables) and code (methods) together. It protects data using access modifiers and provides getters and setters.</p>
+                        <pre class="code-block mt-4"><code>class Student {
+    private String name;
+    public void setName(String n) { name = n; }
+    public String getName() { return name; }
+}</code></pre>
+                        <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>What is encapsulation and how does it improve security?</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 4. Abstraction -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">4. Abstraction</h2>
+                        <p class="text-gray-400 leading-relaxed">Hiding implementation details while showing only functionality. Achieved using abstract classes or interfaces.</p>
+                        <pre class="code-block mt-4"><code>// Abstract Class Example
+abstract class Shape {
+    abstract void draw();
+}
+
+// Interface Example
+interface Drawable {
+    void draw();
+}</code></pre>
+                        <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Difference between abstraction and encapsulation.</li>
+                                <li>Abstract class vs Interface.</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- 5. Inheritance -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">5. Inheritance</h2>
+                        <p class="text-gray-400 leading-relaxed">Mechanism to re-use code by acquiring properties from another class.</p>
+                         <pre class="code-block mt-4"><code>class Vehicle {
+    void start() { /* ... */ }
+}
+class Car extends Vehicle {
+    // Car inherits start() method
+}</code></pre>
+                        <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Types of inheritance. How to avoid diamond problem in Java?</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- 6. Polymorphism -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">6. Polymorphism</h2>
+                        <p class="text-gray-400 leading-relaxed">The ability of an object or method to take many forms.</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                            <li><strong>Compile-time (Method Overloading):</strong> Same method name, different parameters.</li>
+                            <li><strong>Run-time (Method Overriding):</strong> Child class redefines parent method.</li>
+                        </ul>
+                        <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Difference between overloading and overriding.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 7. Constructors and Destructors -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">7. Constructors and Destructors</h2>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>Constructor:</strong> Special method to initialize objects; same name as class.</li>
+                            <li><strong>Destructor:</strong> Cleans up memory. Automatic in Java (Garbage Collection), explicit in C++ (~ClassName()).</li>
+                        </ul>
+                         <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Constructor vs method. Can a constructor be overloaded?</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 12. Exception Handling -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">12. Exception Handling</h2>
+                        <p class="text-gray-400 leading-relaxed">A mechanism to gracefully handle runtime errors using `try`, `catch`, `throw`, `throws`, and `finally` keywords.</p>
+                        <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Checked vs Unchecked exceptions.</li>
+                                <li>Difference between throw and throws.</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- 15. Common Interview Questions -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">🎯 Common Interview Questions</h2>
+                         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                            <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                <li>What is OOP? Why use it?</li>
+                                <li>Class vs Object</li>
+                                <li>Encapsulation vs Abstraction</li>
+                                <li>Overloading vs Overriding</li>
+                                <li>Abstract class vs Interface</li>
+                                <li>Types of inheritance in Java</li>
+                            </ul>
+                             <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                <li>this vs super</li>
+                                <li>Static vs Instance members</li>
+                                <li>Access modifiers and their scope</li>
+                                <li>Constructor vs Method</li>
+                                <li>Exception handling (checked vs unchecked)</li>
+                                <li>Garbage collection in Java</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+      <!-- Timer Display -->
+    <div id="timer-display"
+        class="hidden fixed bottom-5 right-5 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-2xl border border-indigo-500/50">
+
+        <p class="text-sm">Time on <strong id="section-name" class="text-indigo-400"></strong>: <span id="time-spent"
+        class="font-mono font-bold"></span></p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-indigo-500">Zeduca</h3>
+                    <p class="text-gray-400">Your journey to knowledge starts here. We are committed to providing the best learning experience.</p>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="index.html#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li class="mb-2"><a href="index.html#courses" class="text-gray-400 hover:text-white">Courses</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                 <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Contact Us</h4>
+                    <ul>
+                        <li class="mb-2 flex items-center"><i class="fas fa-map-marker-alt mr-2 text-indigo-500"></i> 123 Education Lane, Learning City</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-envelope mr-2 text-indigo-500"></i> contact@educa.com</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-phone mr-2 text-indigo-500"></i> +1 234 567 890</li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div>
+                     <h4 class="text-lg font-semibold mb-4 text-white">Follow Us</h4>
+                     <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in text-xl"></i></a>
+                     </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Educa. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <script src="timer.js"></script>
+
+</body>
+</html>

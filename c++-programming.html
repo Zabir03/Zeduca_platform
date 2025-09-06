@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Language Tutorial - Educa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .sidebar-link {
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .sidebar-link.active {
+            background-color: #6366f1; /* indigo-500 */
+            color: white;
+            font-weight: 600;
+        }
+        .content-section h3 {
+            border-left: 3px solid #6366f1;
+            padding-left: 0.75rem;
+        }
+        .content-section h4 {
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 600; /* semibold */
+            color: #a5b4fc; /* indigo-300 */
+            margin-top: 1.5rem; /* mt-6 */
+        }
+        /* Hide scrollbar for webkit browsers */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header Section -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center relative">
+            <a href="index.html" class="text-3xl font-bold text-indigo-500">Educa</a>
+            <div class="hidden md:flex items-center space-x-8 absolute left-1/2 -translate-x-1/2">
+                <a href="index.html#home" class="text-gray-300 hover:text-white font-medium">Home</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-white font-medium">About</a>
+                <a href="index.html#courses" class="text-gray-300 hover:text-white font-medium">Courses</a>
+                <a href="index.html#contact" class="text-gray-300 hover:text-white font-medium">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl text-indigo-500"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-6 pt-2 pb-4">
+            <a href="index.html#home" class="block py-2 text-gray-300 hover:text-white">Home</a>
+            <a href="index.html#about" class="block py-2 text-gray-300 hover:text-white">About</a>
+            <a href="index.html#courses" class="block py-2 text-gray-300 hover:text-white">Courses</a>
+            <a href="index.html#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Body with Sidebar -->
+    <div class="container mx-auto px-6 py-12 flex flex-col md:flex-row gap-8">
+        
+        <!-- Sidebar -->
+        <aside class="w-full md:w-1/4 lg:w-1/5">
+            <div class="bg-gray-800 rounded-lg p-4 sticky top-24">
+                <h2 class="text-xl font-bold text-white mb-4">C++ Topics</h2>
+                <nav id="sidebar-nav" class="flex flex-row md:flex-col overflow-x-auto no-scrollbar pb-4 md:pb-0">
+                    <a href="#" class="sidebar-link active flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="intro-cpp">Introduction</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="structure-cpp">Basic Structure</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="datatypes-cpp">Data Types & Variables</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="operators-cpp">Operators</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="control-cpp">Control Statements</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="functions-cpp">Functions</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="arrays-cpp">Arrays & Strings</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="pointers-cpp">Pointers & References</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="oop-cpp">OOP Concepts</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="files-cpp">File Handling</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="exceptions-cpp">Exception Handling</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="templates-cpp">Templates</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="stl-cpp">STL</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="advanced-cpp">Advanced C++</a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main id="main-content" class="w-full md:w-3/4 lg:w-4/5">
+            <a href="lang.html" class="text-indigo-400 hover:text-indigo-300 mb-6 inline-block"><i class="fas fa-arrow-left mr-2"></i> Back to Languages</a>
+            <div class="bg-gray-800 rounded-lg shadow-lg p-8 md:p-12">
+                
+                <div id="intro-cpp" class="content-section space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">1. Introduction to C++</h2>
+                    <h3 class="text-2xl font-bold text-indigo-400 pt-2">History & Purpose</h3>
+                    <p class="text-gray-400">Developed by Bjarne Stroustrup at Bell Labs starting in 1979, C++ was created as an extension of the C language. Its primary goal was to add object-oriented features to C, allowing for better organization and management of large-scale software projects.</p>
+                    <h3 class="text-2xl font-bold text-indigo-400 pt-2">Key Features</h3>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <li><strong>Hybrid Language:</strong> Combines low-level capabilities (like C) with high-level object-oriented features.</li>
+                        <li><strong>Performance:</strong> As a compiled language, C++ is known for its speed and efficiency, making it a top choice for game engines, high-frequency trading, and system software.</li>
+                        <li><strong>Object-Oriented:</strong> Fully supports OOP principles like encapsulation, inheritance, and polymorphism.</li>
+                        <li><strong>STL:</strong> The Standard Template Library provides a rich set of data structures and algorithms.</li>
+                    </ul>
+                </div>
+
+                <div id="structure-cpp" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">2. Basic Structure of a C++ Program</h2>
+                    <p class="text-gray-400">Every C++ program has a fundamental structure that includes necessary headers, a namespace declaration, and a `main` function where execution begins.</p>
+                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code class="language-cpp">#include &lt;iostream&gt;
+
+// This line allows us to use names for objects and variables from the standard library.
+using namespace std;
+
+// The main function is the entry point of every C++ program
+int main() {
+    // cout is used for output. &lt;&lt; is the insertion operator.
+    cout &lt;&lt; "Hello, World!"; 
+    
+    // return 0 indicates that the program ended successfully.
+    return 0;
+}
+</code></pre>
+                </div>
+
+                <div id="datatypes-cpp" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">3. Data Types and Variables</h2>
+                    <p class="text-gray-400">Variables are named storage locations. In C++, every variable has a data type that determines the kind of data it can hold.</p>
+                    <h3 class="text-2xl font-bold text-indigo-400 pt-2">Categories of Data Types</h3>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <li><strong>Primitive Types:</strong> <code>int</code>, <code>float</code>, <code>double</code>, <code>char</code>, <code>bool</code>. These are the fundamental building blocks.</li>
+                        <li><strong>Derived Types:</strong> <code>array</code>, <code>pointer</code>, <code>reference</code>. These are built from primitive types.</li>
+                        <li><strong>User-Defined Types:</strong> <code>class</code>, <code>struct</code>, <code>enum</code>. These are custom types you can create.</li>
+                    </ul>
+                </div>
+
+                <div id="operators-cpp" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">4. Operators</h2>
+                    <p class="text-gray-400">Operators are symbols that perform operations. C++ has a wide range of operators.</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <li><strong>Arithmetic:</strong> <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></li>
+                        <li><strong>Relational:</strong> <code>==</code>, <code>!=</code>, <code>></code>, <code><</code>, <code>>=</code>, <code><=</code></li>
+                        <li><strong>Logical:</strong> <code>&&</code> (AND), <code>||</code> (OR), <code>!</code> (NOT)</li>
+                        <li><strong>Bitwise:</strong> <code>&</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code><<</code>, <code>>></code></li>
+                    </ul>
+                </div>
+
+                <div id="control-cpp" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">5. Control Statements</h2>
+                    <p class="text-gray-400">Control statements alter the flow of execution in a program.</p>
+                    <h3 class="text-2xl font-bold text-indigo-400 pt-2">Decision Making & Loops</h3>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <li><strong>Decision Making:</strong> <code>if-else</code>, <code>switch-case</code></li>
+                        <li><strong>Loops:</strong> <code>for</code>, <code>while</code>, <code>do-while</code> for repetitive tasks.</li>
+                        <li><strong>Jump Statements:</strong> <code>break</code>, <code>continue</code>, <code>goto</code> to alter the loop/switch flow.</li>
+                    </ul>
+                </div>
+                
+                <div id="functions-cpp" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">6. Functions</h2>
+                    <p class="text-gray-400">Functions are blocks of code that can be reused. C++ supports function overloading, where multiple functions can have the same name but different parameters.</p>
+                </div>
+
+                <div id="arrays-cpp" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">7. Arrays and Strings</h2>
+                    <p class="text-gray-400">Arrays store multiple items of the same type. C++ has C-style character arrays and a more powerful <code>string</code> class from the STL.</p>
+                </div>
+
+                <div id="pointers-cpp" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">8. Pointers and References</h2>
+                    <p class="text-gray-400">Pointers store memory addresses. References are aliases for existing variables. C++ also supports dynamic memory allocation with <code>new</code> and <code>delete</code>.</p>
+                </div>
+
+                <div id="oop-cpp" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">9. Object-Oriented Programming (OOP)</h2>
+                    <p class="text-gray-400">This is the core paradigm of C++. It helps in building modular and reusable code.</p>
+                    <h4>(a) Classes and Objects</h4>
+                    <p class="text-gray-400">A class is a blueprint for creating objects (instances).</p>
+                    <h4>(b) Encapsulation</h4>
+                    <p class="text-gray-400">Binding data and the functions that manipulate them together. Access is controlled by <code>public</code>, <code>protected</code>, and <code>private</code> specifiers.</p>
+                    <h4>(c) Inheritance</h4>
+                    <p class="text-gray-400">A class can inherit properties from another class, promoting code reuse.</p>
+                    <h4>(d) Polymorphism</h4>
+                    <p class="text-gray-400">"Many forms." Achieved via function/operator overloading (compile-time) and virtual functions (run-time).</p>
+                    <h4>(e) Abstraction</h4>
+                    <p class="text-gray-400">Hiding complex implementation details and showing only the necessary features.</p>
+                </div>
+                
+                <div id="files-cpp" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">10. File Handling</h2>
+                    <p class="text-gray-400">C++ provides the <code>&lt;fstream&gt;</code> library to work with files, allowing you to read from and write to them.</p>
+                </div>
+
+                <div id="exceptions-cpp" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">11. Exception Handling</h2>
+                    <p class="text-gray-400">Provides a way to handle runtime errors gracefully using <code>try</code>, <code>catch</code>, and <code>throw</code> blocks.</p>
+                </div>
+
+                <div id="templates-cpp" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">12. Templates</h2>
+                    <p class="text-gray-400">Templates allow you to write generic programs. Function and class templates let you define functions and classes that work with any data type.</p>
+                </div>
+
+                <div id="stl-cpp" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">13. Standard Template Library (STL)</h2>
+                    <p class="text-gray-400">A set of C++ template classes to provide common data structures and functions.</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <li><strong>Containers:</strong> <code>vector</code>, <code>list</code>, <code>map</code>, <code>set</code>, etc.</li>
+                        <li><strong>Algorithms:</strong> <code>sort()</code>, <code>find()</code>, <code>binary_search()</code>, etc.</li>
+                        <li><strong>Iterators:</strong> Objects that act like pointers to access container elements.</li>
+                    </ul>
+                </div>
+
+                <div id="advanced-cpp" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">14. Advanced C++</h2>
+                    <p class="text-gray-400">Modern C++ (C++11 and later) introduced powerful features like smart pointers (<code>unique_ptr</code>, <code>shared_ptr</code>) for automatic memory management, lambda expressions for anonymous functions, and multithreading support.</p>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+      <!-- Timer Display -->
+    <div id="timer-display"
+        class="hidden fixed bottom-5 right-5 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-2xl border border-indigo-500/50">
+
+        <p class="text-sm">Time on <strong id="section-name" class="text-indigo-400"></strong>: <span id="time-spent"
+        class="font-mono font-bold"></span></p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-12">
+        <div class="container mx-auto px-6">
+             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-indigo-500">Educa</h3>
+                    <p class="text-gray-400">Your journey to knowledge starts here.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="index.html#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li class="mb-2"><a href="index.html#courses" class="text-gray-400 hover:text-white">Courses</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Contact Us</h4>
+                    <ul>
+                        <li class="mb-2 flex items-center"><i class="fas fa-map-marker-alt mr-2 text-indigo-500"></i> Learning City</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-envelope mr-2 text-indigo-500"></i> contact@educa.com</li>
+                    </ul>
+                </div>
+                <div>
+                     <h4 class="text-lg font-semibold mb-4 text-white">Follow Us</h4>
+                     <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                     </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Educa. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Sidebar navigation logic
+        const sidebarNav = document.getElementById('sidebar-nav');
+        const contentSections = document.querySelectorAll('.content-section');
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+        sidebarNav.addEventListener('click', (e) => {
+            e.preventDefault();
+            const clickedLink = e.target.closest('.sidebar-link');
+
+            if (clickedLink) {
+                const targetId = clickedLink.dataset.target;
+
+                // Hide all content sections
+                contentSections.forEach(section => {
+                    section.classList.add('hidden');
+                });
+
+                // Show the target content section
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.classList.remove('hidden');
+                }
+
+                // Update active link style
+                sidebarLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+                clickedLink.classList.add('active');
+            }
+        });
+    </script>
+    <script src="timer.js"></script>
+
+</body>
+</html>

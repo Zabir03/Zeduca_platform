@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Learning Platform</title>
+
+    <link rel="icon" type="image/svg" href="image/ze.svg">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+
+
+<script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="_QZKHSxdPNo1JVYq507wB";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+
+
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-indigo-500">Zeduca</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link active text-gray-300 hover:text-white font-medium pb-1">Home</a>
+                <a href="#about" class="nav-link text-gray-300 hover:text-white font-medium pb-1">About</a>
+                <a href="#courses" class="nav-link text-gray-300 hover:text-white font-medium pb-1">Courses</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-white font-medium pb-1">Contact</a>
+            </div>
+            <a href="login.html"
+                class="hidden md:block bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">Get
+                Started</a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl text-indigo-500"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-6 pt-2 pb-4">
+            <a href="#home" class="block py-2 text-gray-300 hover:text-white">Home</a>
+            <a href="#about" class="block py-2 text-gray-300 hover:text-white">About</a>
+            <a href="#courses" class="block py-2 text-gray-300 hover:text-white">Courses</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+            <a href="login.html"
+                class="block mt-2 bg-indigo-600 text-white text-center px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">Get
+                Started</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg py-20 lg:py-24">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+                    <div class="text-center lg:text-left">
+                        <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                            The Best Online Learning Platform
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-300 max-w-lg mx-auto lg:mx-0 mb-8">
+                            Unlock your potential with our expert-led courses. Learn anytime, anywhere, and at your own
+                            pace.
+                        </p>
+                        <a href="#courses"
+                            class="bg-indigo-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-indigo-700 transition-transform transform hover:scale-105 inline-block">
+                            Explore Courses
+                        </a>
+                    </div>
+                    <div class="hidden lg:block">
+                        <img src="image/a1.png" alt="Online Learning" class="rounded-lg shadow-2xl w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <!-- Features Section (Your Provided Code) -->
+        <section id="features" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-2 text-white">Why Choose Educa?</h2>
+                <p class="text-lg text-gray-400 mb-12">We provide the best tools for your learning journey.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="feature-item">
+                        <div
+                            class="bg-gray-800 text-indigo-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user-tie text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">Skilled Instructors</h3>
+                        <p class="text-gray-400">Learn from industry experts who are passionate about teaching.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div
+                            class="bg-gray-800 text-indigo-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-laptop-code text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">Online Classes</h3>
+                        <p class="text-gray-400">Access your courses from anywhere in the world.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div
+                            class="bg-gray-800 text-indigo-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-infinity text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">Lifetime Access</h3>
+                        <p class="text-gray-400">Get unlimited access to your courses for a lifetime.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2">
+                        <img src="image/a2.png" alt="About Us" class="rounded-lg shadow-xl">
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h2 class="text-4xl font-bold mb-4 text-white">Welcome to <span
+                                class="text-indigo-500">Educa</span></h2>
+                        <p class="text-gray-300 mb-4 leading-relaxed">
+                            We are dedicated to providing high-quality, accessible, and affordable online education to
+                            students worldwide.
+                        </p>
+                        <p class="text-gray-300 mb-6 leading-relaxed">
+                            With a wide range of courses taught by expert instructors, we provide the tools and support
+                            you need to succeed.
+                        </p>
+                        <a href="#courses"
+                            class="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-700 transition-colors">See
+                            Our Courses</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section with Task Manager -->
+        <section id="courses" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white">Track Your Progress</h2>
+                    <p class="text-lg text-gray-400 mt-2">Stay organized and monitor your learning goals.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- To-Do List Column -->
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-white mb-6 flex items-center"><i
+                                class="fas fa-list-check mr-3 text-indigo-400"></i>Daily To-Do List</h3>
+                        <div class="flex gap-2 mb-4">
+                            <input type="text" id="todo-input" placeholder="Add a new task..."
+                                class="flex-grow bg-gray-700 text-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <button id="add-todo-btn"
+                                class="bg-indigo-600 text-white px-5 py-2 rounded-md hover:bg-indigo-700 transition-colors font-semibold">Add</button>
+                        </div>
+                        <div id="todo-list" class="space-y-3 mt-6 max-h-80 overflow-y-auto pr-2"></div>
+                    </div>
+                    <!-- Task Manager Column -->
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-white mb-6 flex items-center"><i
+                                class="fas fa-tasks mr-3 text-indigo-400"></i>Course Task Manager</h3>
+                        <div class="flex gap-2 mb-4">
+                            <input type="text" id="progress-task-input" placeholder="Add a course module..."
+                                class="flex-grow bg-gray-700 text-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <button id="add-progress-task-btn"
+                                class="bg-indigo-600 text-white px-5 py-2 rounded-md hover:bg-indigo-700 transition-colors font-semibold">Add</button>
+                        </div>
+                        <div id="progress-list" class="space-y-6 mt-6 max-h-80 overflow-y-auto pr-2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Courses Section -->
+        <!-- (keeping same course HTML as before, shortened for readability) -->
+        <!-- ... Copy your full Courses and Footer section here ... -->
+        <!-- Courses Section -->
+        <section id="courses" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-white">Our Popular Courses</h2>
+                    <p class="text-lg text-gray-400 mt-2">Explore our wide range of courses tailored for your success.
+                    </p>
+                </div> <!-- Academic Courses -->
+                <div class="mb-16">
+                    <h3 class="text-3xl font-bold text-center mb-8 text-indigo-500">Academic Courses</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"> <!-- Card Template -->
+                        <div class="course-card bg-gray-800 rounded-lg shadow-lg overflow-hidden"> <img
+                                src="image/s1.png" alt="Semester I" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-white">Semester I</h4>
+                                <p class="text-gray-400 mb-4">Foundation courses to build your core knowledge.</p> <a
+                                    href="sem1.html" class="text-indigo-500 font-semibold hover:underline">Learn More <i
+                                        class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="course-card bg-gray-800 rounded-lg shadow-lg overflow-hidden"> <img
+                                src="image/s2.png" alt="Semester II" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-white">Semester II</h4>
+                                <p class="text-gray-400 mb-4">Diving deeper into fundamental concepts.</p> <a
+                                    href="sem2.html" class="text-indigo-500 font-semibold hover:underline">Learn More <i
+                                        class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="course-card bg-gray-800 rounded-lg shadow-lg overflow-hidden"> <img
+                                src="image/s3.png" alt="Semester III" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-white">Semester III</h4>
+                                <p class="text-gray-400 mb-4">Intermediate topics and practical applications.</p> <a
+                                    href="sem3.html" class="text-indigo-500 font-semibold hover:underline">Learn More <i
+                                        class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="course-card bg-gray-800 rounded-lg shadow-lg overflow-hidden"> <img
+                                src="image/s4.png" alt="Semester IV" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-white">Semester IV</h4>
+                                <p class="text-gray-400 mb-4">Building on your existing skills with new challenges.</p>
+                                <a href="sem4.html" class="text-indigo-500 font-semibold hover:underline">Learn More <i
+                                        class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="course-card bg-gray-800 rounded-lg shadow-lg overflow-hidden"> <img
+                                src="image/s5.png" alt="Semester V" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-white">Semester V</h4>
+                                <p class="text-gray-400 mb-4">Advanced subjects and specialization tracks.</p> <a
+                                    href="sem5.html" class="text-indigo-500 font-semibold hover:underline">Learn More <i
+                                        class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="course-card bg-gray-800 rounded-lg shadow-lg overflow-hidden"> <img
+                                src="image/s6.png" alt="Semester VI" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-white">Semester VI</h4>
+                                <p class="text-gray-400 mb-4">Project work and real-world problem solving.</p> <a
+                                    href="sem6.html" class="text-indigo-500 font-semibold hover:underline">Learn More <i
+                                        class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="course-card bg-gray-800 rounded-lg shadow-lg overflow-hidden"> <img
+                                src="image/s7.png" alt="Semester VII" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-white">Semester VII</h4>
+                                <p class="text-gray-400 mb-4">Preparing for final projects and industry internships.</p>
+                                <a href="sem7.html" class="text-indigo-500 font-semibold hover:underline">Learn More <i
+                                        class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="course-card bg-gray-800 rounded-lg shadow-lg overflow-hidden"> <img
+                                src="image/s8.png" alt="Semester VIII" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-white">Semester VIII</h4>
+                                <p class="text-gray-400 mb-4">Final thesis, graduation projects, and career prep.</p> <a
+                                    href="sem8.html" class="text-indigo-500 font-semibold hover:underline">Learn More <i
+                                        class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Placement Courses -->
+                <div>
+                    <h3 class="text-3xl font-bold text-center mb-8 text-indigo-500">Placement Preparation Courses</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"> <!-- Card Template -->
+                        <div class="course-card bg-gray-800 rounded-lg shadow-lg overflow-hidden"> <img
+                                src="image/p1.png" alt="Computer Network" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-white">Computer Networks</h4>
+                                <p class="text-gray-400 mb-4">Master the fundamentals of networking and protocols.</p>
+                                <a href="computerN.html" class="text-indigo-500 font-semibold hover:underline">Learn
+                                    More <i class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="course-card bg-gray-800 rounded-lg shadow-lg overflow-hidden"> <img
+                                src="image/p2.png" alt="Operating System" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-white">Operating System</h4>
+                                <p class="text-gray-400 mb-4">Understand the core concepts behind modern OS.</p> <a
+                                    href="operatingS.html" class="text-indigo-500 font-semibold hover:underline">Learn
+                                    More <i class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="course-card bg-gray-800 rounded-lg shadow-lg overflow-hidden"> <img
+                                src="image/p3.png" alt="DBMS" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-white">DBMS</h4>
+                                <p class="text-gray-400 mb-4">Learn to manage and query databases effectively.</p> <a
+                                    href="dbms.html" class="text-indigo-500 font-semibold hover:underline">Learn More <i
+                                        class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="course-card bg-gray-800 rounded-lg shadow-lg overflow-hidden"> <img
+                                src="image/p4.png" alt="DSA" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-white">Data Structures & Algo</h4>
+                                <p class="text-gray-400 mb-4">Crack coding interviews with strong DSA skills.</p> <a
+                                    href="dsa.html" class="text-indigo-500 font-semibold hover:underline">Learn More <i
+                                        class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="course-card bg-gray-800 rounded-lg shadow-lg overflow-hidden"> <img
+                                src="image/p5.png" alt="OOP" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-white">Object Oriented Programming</h4>
+                                <p class="text-gray-400 mb-4">Crack coding interviews with strong OOP's skills.</p> <a
+                                    href="oop.html" class="text-indigo-500 font-semibold hover:underline">Learn More <i
+                                        class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    </main>
+
+    <!-- Timer Display -->
+    <!-- <div id="timer-display"
+        class="hidden fixed bottom-5 right-5 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-2xl border border-indigo-500/50">
+
+        <p class="text-sm">Time on <strong id="section-name" class="text-indigo-400"></strong>: <span id="time-spent"
+        class="font-mono font-bold"></span></p>
+    </div> -->
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 border-t border-gray-700 py-12">
+        <!-- (Footer content same as before) -->
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8"> <!-- About -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-indigo-500">Zeduca</h3>
+                    <p class="text-gray-400">Your journey to knowledge starts here. We are committed to providing the
+                        best learning experience.</p>
+                </div> <!-- Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li class="mb-2"><a href="#courses" class="text-gray-400 hover:text-white">Courses</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li class="mb-2"><a href="feedback.html" class="text-gray-400 hover:text-white">Feedback</a>
+                        </li>
+                    </ul>
+                </div> <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Contact Us</h4>
+                    <ul>
+                        <li class="mb-2 flex items-center"><i class="fas fa-map-marker-alt mr-2 text-indigo-500"></i> <a
+                                href="https://maps.app.goo.gl/hsCcVmjeL9oUTJed6">knowledge Park 3, Greater Noida,
+                                201310</a></li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-envelope mr-2 text-indigo-500"></i> <a
+                                href="#">contact@educa.com</a> </li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-phone mr-2 text-indigo-500"></i> +1 234 567
+                            890</li>
+                    </ul>
+                </div> <!-- Social -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Follow Us</h4>
+                    <div class="flex space-x-4"> <a href="#" class="text-gray-400 hover:text-white"><i
+                                class="fab fa-facebook-f text-xl"></i></a> <a href="#"
+                            class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a> <a
+                            href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i
+                                class="fab fa-linkedin-in text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Educa. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- To-Do List Logic ---
+            const todoInput = document.getElementById('todo-input');
+            const addTodoBtn = document.getElementById('add-todo-btn');
+            const todoList = document.getElementById('todo-list');
+
+            const addTodo = () => {
+                const taskText = todoInput.value.trim();
+                if (taskText === '') {
+                    alert('Please enter a task.');
+                    return;
+                }
+
+                const todoItem = document.createElement('div');
+                todoItem.className = 'bg-gray-700/50 p-3 rounded-lg flex items-center justify-between transition-all';
+
+                const textSpan = document.createElement('span');
+                textSpan.textContent = taskText;
+                textSpan.className = 'flex-grow cursor-pointer';
+
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.className = 'form-checkbox h-5 w-5 bg-gray-800 border-gray-600 text-indigo-600 focus:ring-indigo-500 rounded mr-4 cursor-pointer';
+
+                checkbox.addEventListener('change', () => {
+                    textSpan.classList.toggle('completed');
+                    todoItem.classList.toggle('opacity-50');
+                });
+                textSpan.addEventListener('click', () => checkbox.click());
+
+                const deleteBtn = document.createElement('button');
+                deleteBtn.innerHTML = '<i class="fas fa-trash-alt text-gray-500 hover:text-red-500"></i>';
+                deleteBtn.className = 'ml-4';
+                deleteBtn.addEventListener('click', () => {
+                    todoItem.classList.add('scale-0');
+                    setTimeout(() => todoItem.remove(), 300);
+                });
+
+                const wrapper = document.createElement('div');
+                wrapper.className = 'flex items-center';
+                wrapper.appendChild(checkbox);
+                wrapper.appendChild(textSpan);
+
+                todoItem.appendChild(wrapper);
+                todoItem.appendChild(deleteBtn);
+
+                todoList.appendChild(todoItem);
+                todoInput.value = '';
+                todoInput.focus();
+            };
+
+            addTodoBtn.addEventListener('click', addTodo);
+            todoInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    addTodo();
+                }
+            });
+
+            // --- Task Progress Logic ---
+            const progressTaskInput = document.getElementById('progress-task-input');
+            const addProgressTaskBtn = document.getElementById('add-progress-task-btn');
+            const progressList = document.getElementById('progress-list');
+
+            const addProgressTask = () => {
+                const taskName = progressTaskInput.value.trim();
+                if (taskName === '') {
+                    alert('Please enter a task name.');
+                    return;
+                }
+
+                const progressItem = document.createElement('div');
+                progressItem.className = 'progress-item';
+
+                progressItem.innerHTML = `
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-white">${taskName}</span>
+                        <div class="flex items-center gap-2">
+                            <span class="progress-label text-sm font-bold text-indigo-300">0%</span>
+                            <button class="delete-progress-btn"><i class="fas fa-times-circle text-gray-500 hover:text-red-500"></i></button>
+                        </div>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2.5">
+                        <div class="progress-bar bg-indigo-600 h-2.5 rounded-full transition-all duration-500" style="width: 0%"></div>
+                    </div>
+                    <div class="mt-2 text-right">
+                         <input type="range" min="0" max="100" value="0" class="progress-slider w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                    </div>
+                `;
+
+                progressList.appendChild(progressItem);
+
+                const slider = progressItem.querySelector('.progress-slider');
+                const progressBar = progressItem.querySelector('.progress-bar');
+                const progressLabel = progressItem.querySelector('.progress-label');
+                const deleteBtn = progressItem.querySelector('.delete-progress-btn');
+
+                slider.addEventListener('input', (e) => {
+                    const value = e.target.value;
+                    progressBar.style.width = `${value}%`;
+                    progressLabel.textContent = `${value}%`;
+                });
+
+                deleteBtn.addEventListener('click', () => {
+                    progressItem.remove();
+                });
+
+                progressTaskInput.value = '';
+                progressTaskInput.focus();
+            };
+
+            addProgressTaskBtn.addEventListener('click', addProgressTask);
+            progressTaskInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    addProgressTask();
+                }
+            });
+
+
+
+        });
+//          const timeSpent = {};
+
+//             let currentSectionId = null;
+
+//             let timerInterval = null;
+
+//            
+
+//             const sections = document.querySelectorAll('section');
+
+//             const navLinks = document.querySelectorAll('.nav-link');
+
+//             const timerDisplay = document.getElementById('timer-display');
+
+//             const sectionNameSpan = document.getElementById('section-name');
+
+//             const timeSpentSpan = document.getElementById('time-spent');
+
+
+
+//             const formatTime = (seconds) => {
+
+//                 const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
+
+//                 const secs = (seconds % 60).toString().padStart(2, '0');
+
+//                 return `${mins}:${secs}`;
+
+//             };
+
+
+
+//             const startTimerForSection = (sectionId) => {
+
+//                 if (!timeSpent[sectionId]) timeSpent[sectionId] = 0;
+
+
+
+//                 const friendlyName = sectionId.charAt(0).toUpperCase() + sectionId.slice(1);
+
+//                 sectionNameSpan.textContent = friendlyName;
+
+//                 timerDisplay.style.display = 'block';
+
+
+
+//                 timerInterval = setInterval(() => {
+
+//                     timeSpent[sectionId]++;
+
+//                     if (currentSectionId === sectionId) {
+
+//                         timeSpentSpan.textContent = formatTime(timeSpent[sectionId]);
+
+//                     }
+
+//                 }, 1000);
+
+//             };
+
+
+
+//             const observerCallback = (entries) => {
+
+//                 entries.forEach(entry => {
+
+//                     const id = entry.target.id;
+
+//                     if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+
+//                         if (id !== currentSectionId) {
+
+//                             clearInterval(timerInterval);
+
+//                             currentSectionId = id;
+
+//                             startTimerForSection(id);
+
+//                            
+
+//                             // Update active nav link
+
+//                             navLinks.forEach(link => {
+
+//                                 link.classList.remove('active');
+
+//                                 if(link.getAttribute('href') === `#${id}`) {
+
+//                                     link.classList.add('active');
+
+//                                 }
+
+//                             });
+
+//                         }
+
+//                     }
+
+//                 });
+
+//             };
+
+
+
+//             const observer = new IntersectionObserver(observerCallback, { threshold: 0.5 });
+
+//             sections.forEach(section => observer.observe(section));
+    </script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

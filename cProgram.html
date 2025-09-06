@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-Programming Details - Educa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .topic-section {
+            transition: box-shadow 0.3s ease;
+        }
+        .topic-section:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+        pre {
+            background-color: #1a202c; /* A slightly darker gray */
+            border-left: 4px solid #6366f1; /* Indigo border */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            color: #e2e8f0; /* Lighter text for contrast */
+            font-family: 'Fira Code', 'Courier New', monospace;
+        }
+        code {
+            font-family: 'Fira Code', 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header Section -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-indigo-500">Educa</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#home" class="text-gray-300 hover:text-white font-medium">Home</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-white font-medium">About</a>
+                <a href="index.html#courses" class="text-gray-300 hover:text-white font-medium">Courses</a>
+                <a href="index.html#contact" class="text-gray-300 hover:text-white font-medium">Contact</a>
+            </div>
+            <a href="login.html" class="hidden md:block bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">Get Started</a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl text-indigo-500"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-6 pt-2 pb-4">
+            <a href="index.html#home" class="block py-2 text-gray-300 hover:text-white">Home</a>
+            <a href="index.html#about" class="block py-2 text-gray-300 hover:text-white">About</a>
+            <a href="index.html#courses" class="block py-2 text-gray-300 hover:text-white">Courses</a>
+            <a href="index.html#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+            <a href="#" class="block mt-2 bg-indigo-600 text-white text-center px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Body Section -->
+    <main class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                 <a href="sem1.html" class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"><i class="fas fa-arrow-left mr-2"></i> Back to Semester Courses</a>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white">Deep Dive into C-Programming</h1>
+                <p class="text-lg text-gray-400 mt-2 max-w-3xl mx-auto">A comprehensive guide to the fundamental concepts of the C language, from basic syntax to advanced topics.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-12">
+                <!-- Introduction -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">1. What is C?</h2>
+                    <p class="text-gray-300 leading-relaxed">C is a powerful, general-purpose programming language developed in the 1970s by Dennis Ritchie at Bell Labs. It is a procedural language, which means it follows a step-by-step approach. C is known for its efficiency, low-level memory manipulation, and a simple set of keywords, making it a foundational language for learning computer science and the basis for many other languages like C++, C#, and Objective-C.</p>
+                </section>
+
+                <!-- Basic Syntax -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">2. Basic Syntax & "Hello, World!"</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">Every C program is composed of functions and variables. The `main()` function is the entry point of every C program. Here is the classic "Hello, World!" example:</p>
+                    <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    // This line prints the output to the screen
+    printf("Hello, World!\n");
+    return 0;
+}</code></pre>
+                    <ul class="list-disc list-inside mt-4 text-gray-300 space-y-2">
+                        <li><code>#include &lt;stdio.h&gt;</code> is a preprocessor command that includes the standard input-output library.</li>
+                        <li><code>int main()</code> is where the program execution begins.</li>
+                        <li><code>printf()</code> is a library function to send formatted output to the screen.</li>
+                        <li><code>return 0;</code> terminates the <code>main()</code> function and indicates successful execution.</li>
+                    </ul>
+                </section>
+
+                <!-- Data Types -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">3. Data Types and Variables</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">Variables are containers for storing data values. In C, you must declare the type of a variable. Key data types include:</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2 mb-4">
+                        <li><code>int</code>: Stores integers (whole numbers), like 123 or -456.</li>
+                        <li><code>float</code>: Stores floating-point numbers, with single precision, like 19.99.</li>
+                        <li><code>double</code>: Stores floating-point numbers, with double precision for more accuracy.</li>
+                        <li><code>char</code>: Stores single characters, like 'a' or 'B'. Char values are surrounded by single quotes.</li>
+                    </ul>
+                     <pre><code class="language-c">int age = 25;
+float price = 55.99;
+char grade = 'A';</code></pre>
+                </section>
+
+                <!-- Control Flow -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">4. Control Flow (Decision Making)</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">Control flow statements allow you to control the order in which the program's statements are executed.</p>
+                    <h3 class="text-xl font-semibold text-white mb-2">If-Else Statement</h3>
+                    <pre><code class="language-c">int number = 10;
+if (number > 0) {
+    printf("The number is positive.");
+} else {
+    printf("The number is not positive.");
+}</code></pre>
+                     <h3 class="text-xl font-semibold text-white mt-6 mb-2">For Loop</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">Used to repeat a block of code a known number of times.</p>
+                     <pre><code class="language-c">for (int i = 0; i < 5; i++) {
+    printf("%d\n", i);
+}</code></pre>
+                </section>
+
+                <!-- Functions -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">5. Functions</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">A function is a block of code that performs a specific task. You can pass data, known as parameters, into a function. Functions are used to modularize code and improve reusability.</p>
+                     <pre><code class="language-c">// Function declaration
+void greet() {
+    printf("Good Morning!\n");
+}
+
+int main() {
+    // Function call
+    greet();
+    return 0;
+}</code></pre>
+                </section>
+                
+                <!-- Pointers -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">6. Pointers</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">A pointer is a variable that stores the memory address of another variable. They are one of the most powerful and unique features of C, allowing for direct memory manipulation, dynamic memory allocation, and efficient array handling.</p>
+                     <pre><code class="language-c">int myAge = 43;      // An int variable
+int* ptr = &myAge; // A pointer variable, with the name ptr, that stores the address of myAge
+
+// Output the value of myAge (43)
+printf("%d\n", myAge);
+
+// Output the memory address of myAge
+printf("%p\n", &myAge);
+
+// Output the memory address of myAge with the pointer
+printf("%p\n", ptr);</code></pre>
+                </section>
+
+                <!-- Arrays -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">7. Arrays</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">An array is a collection of variables of the same data type, stored in contiguous memory locations. You can access elements of an array by using an index, starting from 0.</p>
+                     <pre><code class="language-c">int numbers[5] = {10, 20, 30, 40, 50};
+
+// Access the third element (index 2)
+printf("Third element: %d\n", numbers[2]); // Outputs 30
+
+// Change the first element
+numbers[0] = 5;</code></pre>
+                </section>
+                
+                <!-- Strings -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">8. Strings</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">In C, a string is essentially an array of characters, terminated by a special null character `\0`. Strings are defined using double quotes.</p>
+                     <pre><code class="language-c">char greeting[] = "Hello";
+
+printf("Greeting message: %s\n", greeting);</code></pre>
+                    <p class="text-gray-300 leading-relaxed mt-4">The <code>&lt;string.h&gt;</code> library provides many useful functions for manipulating strings, such as <code>strcpy</code> (string copy), <code>strcat</code> (string concatenation), and <code>strlen</code> (string length).</p>
+                </section>
+                
+                <!-- Structures -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">9. Structures</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">A structure (or `struct`) is a user-defined data type that allows you to group different data types together. It's useful for organizing related data into a single logical unit.</p>
+                     <pre><code class="language-c">struct Person {
+    char name[50];
+    int age;
+    float salary;
+};
+
+int main() {
+    struct Person p1;
+    strcpy(p1.name, "John Doe");
+    p1.age = 30;
+    p1.salary = 50000.0;
+
+    printf("Name: %s\n", p1.name);
+    printf("Age: %d\n", p1.age);
+    return 0;
+}</code></pre>
+                </section>
+                
+                <!-- File I/O -->
+                <section class="topic-section bg-gray-800 p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">10. File I/O</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">C provides a set of functions for file input and output, allowing your program to read from and write to files on your disk. This involves creating a pointer to a `FILE` object and using functions like `fopen()`, `fprintf()`, `fscanf()`, and `fclose()`.</p>
+                     <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    FILE *fptr;
+
+    // Open a file in writing mode
+    fptr = fopen("filename.txt", "w");
+
+    // Write some text to the file
+    fprintf(fptr, "Hello, this is some text.");
+
+    // Close the file
+    fclose(fptr);
+
+    return 0;
+}</code></pre>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+      <!-- Timer Display -->
+    <div id="timer-display"
+        class="hidden fixed bottom-5 right-5 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-2xl border border-indigo-500/50">
+
+        <p class="text-sm">Time on <strong id="section-name" class="text-indigo-400"></strong>: <span id="time-spent"
+        class="font-mono font-bold"></span></p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-indigo-500">Educa</h3>
+                    <p class="text-gray-400">Your journey to knowledge starts here. We are committed to providing the best learning experience.</p>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="index.html#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li class="mb-2"><a href="index.html#courses" class="text-gray-400 hover:text-white">Courses</a></li>
+                        <li class="mb-2"><a href="feedback.html" class="text-gray-400 hover:text-white">Feedback</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                 <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Contact Us</h4>
+                    <ul>
+                        <li class="mb-2 flex items-center"><i class="fas fa-map-marker-alt mr-2 text-indigo-500"></i> 123 Education Lane, Learning City</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-envelope mr-2 text-indigo-500"></i> contact@educa.com</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-phone mr-2 text-indigo-500"></i> +1 234 567 890</li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div>
+                     <h4 class="text-lg font-semibold mb-4 text-white">Follow Us</h4>
+                     <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in text-xl"></i></a>
+                     </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Educa. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <script src="timer.js"></script>
+
+</body>
+</html>
+

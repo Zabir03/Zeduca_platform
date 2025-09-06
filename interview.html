@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Network - Educa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .content-section h2 {
+            border-left: 4px solid #6366f1; /* indigo-500 */
+            padding-left: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header Section -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-indigo-500">Educa</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#home" class="text-gray-300 hover:text-white font-medium">Home</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-white font-medium">About</a>
+                <a href="index.html#courses" class="text-gray-300 hover:text-white font-medium">Courses</a>
+                <a href="index.html#contact" class="text-gray-300 hover:text-white font-medium">Contact</a>
+            </div>
+            <a href="#" class="hidden md:block bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">Get Started</a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl text-indigo-500"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-6 pt-2 pb-4">
+            <a href="index.html#home" class="block py-2 text-gray-300 hover:text-white">Home</a>
+            <a href="index.html#about" class="block py-2 text-gray-300 hover:text-white">About</a>
+            <a href="index.html#courses" class="block py-2 text-gray-300 hover:text-white">Courses</a>
+            <a href="index.html#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+            <a href="#" class="block mt-2 bg-indigo-600 text-white text-center px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Body Section -->
+    <main class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <a href="computerN.html" class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"><i class="fas fa-arrow-left mr-2"></i> Back to Courses</a>
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-white">The Complete Guide to Computer Networks</h1>
+                    <p class="text-lg text-gray-400 mt-2">From LANs to the OSI Model, explore the backbone of the digital world.</p>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl shadow-2xl p-8 md:p-12 space-y-12 content-section">
+                    
+                    <!-- 1. Introduction to Computer Networks -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">1. Introduction to Computer Networks</h2>
+                        <h3 class="text-xl font-semibold text-indigo-400 mb-2">Definition:</h3>
+                        <p class="text-gray-400 leading-relaxed">A computer network is a set of computers and devices connected to share resources (files, printers, internet) and exchange data.</p>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Main Goals:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>Resource Sharing:</strong> printers, files, apps</li>
+                            <li><strong>Communication:</strong> email, video conferencing</li>
+                            <li><strong>Scalability:</strong> adding new systems easily</li>
+                            <li><strong>Reliability:</strong> backup, multiple paths</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Types of Networks:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>LAN:</strong> Small area (office, building). High speed.</li>
+                            <li><strong>MAN:</strong> Covers a city or large campus.</li>
+                            <li><strong>WAN:</strong> Covers countries/continents (e.g., Internet).</li>
+                            <li><strong>PAN:</strong> Personal devices (Bluetooth, hotspot).</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Topologies:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>Bus:</strong> single backbone, cheap, but one failure = network crash.</li>
+                            <li><strong>Star:</strong> central hub/switch, easy to manage, single point failure.</li>
+                            <li><strong>Ring:</strong> token passing, predictable, but failure breaks network.</li>
+                            <li><strong>Mesh:</strong> every node connected to every other, fault-tolerant, expensive.</li>
+                            <li><strong>Tree/Hybrid:</strong> mix of topologies.</li>
+                        </ul>
+                        <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Compare LAN, MAN, WAN.</li>
+                                <li>Star vs Bus topology.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 2. Network Models -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">2. Network Models</h2>
+                        <h3 class="text-xl font-semibold text-indigo-400 mb-2">OSI Model (7 Layers)</h3>
+                        <p class="text-gray-400 leading-relaxed">Each layer has a responsibility:</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mt-2">
+                            <li><strong>Physical:</strong> transmission of raw bits (cables, hubs).</li>
+                            <li><strong>Data Link:</strong> error detection/correction, framing (switches).</li>
+                            <li><strong>Network:</strong> routing, logical addressing (IP, routers).</li>
+                            <li><strong>Transport:</strong> reliability, error recovery (TCP, UDP).</li>
+                            <li><strong>Session:</strong> manages sessions (start/stop communication).</li>
+                            <li><strong>Presentation:</strong> data formatting, encryption, compression.</li>
+                            <li><strong>Application:</strong> end-user services (HTTP, FTP, DNS).</li>
+                        </ul>
+                        <p class="mt-4 bg-indigo-900/50 text-indigo-300 p-3 rounded-lg text-center font-mono">👉 Mnemonic: Please Do Not Throw Sausage Pizza Away</p>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-6 mb-2">TCP/IP Model (4 Layers)</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Application</li>
+                            <li>Transport</li>
+                            <li>Internet</li>
+                            <li>Network Access</li>
+                        </ul>
+                        <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Difference between OSI vs TCP/IP.</li>
+                                <li>Functions of each layer.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 3. Physical Layer -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">3. Physical Layer</h2>
+                        <p class="text-gray-400 leading-relaxed">Responsible for transmission of raw bits over physical medium.</p>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Mediums:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>Wired:</strong> Coaxial, Twisted Pair, Fiber Optic.</li>
+                            <li><strong>Wireless:</strong> Radio, Microwave, Infrared.</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Techniques:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>Multiplexing:</strong> FDM (Frequency Division), TDM (Time Division), WDM (Wavelength Division)</li>
+                            <li><strong>Switching Techniques:</strong> Circuit Switching (telephone, dedicated path), Packet Switching (internet, more efficient), Message Switching (store-and-forward, old system)</li>
+                        </ul>
+                         <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Circuit vs Packet Switching.</li>
+                                <li>Fiber vs Copper cable.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 4. Data Link Layer -->
+                    <section>
+                         <h2 class="text-3xl font-bold text-white mb-4">4. Data Link Layer</h2>
+                         <p class="text-gray-400 leading-relaxed">Ensures reliable transmission between directly connected nodes.</p>
+                         <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Functions:</h3>
+                         <p class="text-gray-400">Framing, Error Detection/Correction, Flow Control, MAC.</p>
+                         <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Error Detection & Correction:</h3>
+                         <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Parity bit, Checksum, CRC (Cyclic Redundancy Check), Hamming Code (can detect & correct errors)</li>
+                         </ul>
+                         <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Flow Control:</h3>
+                         <ul class="list-disc list-inside text-gray-400 space-y-2">
+                              <li><strong>Stop-and-Wait ARQ:</strong> send one frame at a time, wait for ACK.</li>
+                              <li><strong>Sliding Window Protocol:</strong> Go-Back-N (retransmit from error onwards), Selective Repeat (only retransmit lost packets).</li>
+                         </ul>
+                         <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">MAC Protocols:</h3>
+                         <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>ALOHA, Slotted ALOHA</li>
+                            <li>CSMA (Carrier Sense Multiple Access)</li>
+                            <li>CSMA/CD → Ethernet (collision detection).</li>
+                            <li>CSMA/CA → WiFi (collision avoidance).</li>
+                         </ul>
+                         <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Explain Go-Back-N vs Selective Repeat.</li>
+                                <li>How CRC detects errors?</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- 5. Network Layer -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">5. Network Layer</h2>
+                        <p class="text-gray-400 leading-relaxed">Responsible for routing & logical addressing.</p>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">IP Addressing:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>IPv4:</strong> 32-bit address (e.g., 192.168.1.1).</li>
+                            <li><strong>IPv6:</strong> 128-bit address, larger space, better security.</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Classes of IPv4:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                           <li>Class A: 0–127 (16M hosts)</li>
+                           <li>Class B: 128–191 (65K hosts)</li>
+                           <li>Class C: 192–223 (254 hosts)</li>
+                           <li>Class D: Multicast</li>
+                           <li>Class E: Reserved</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Subnetting:</h3>
+                        <p class="text-gray-400 leading-relaxed">Dividing a network into smaller subnets to use IP efficiently.</p>
+                        <pre class="bg-gray-900 text-indigo-300 p-3 rounded-lg mt-2 font-mono"><code>👉 Example: 192.168.1.0/24 → 256 addresses.</code></pre>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Routing Algorithms & Protocols:</h3>
+                         <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>Distance Vector:</strong> RIP, Bellman-Ford</li>
+                            <li><strong>Link State:</strong> OSPF, Dijkstra’s</li>
+                            <li><strong>Path Vector:</strong> BGP for Internet</li>
+                            <li><strong>Others:</strong> ARP (IP → MAC), RARP (MAC → IP), ICMP (ping), NAT (private ↔ public IPs).</li>
+                         </ul>
+                         <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>IPv4 vs IPv6.</li>
+                                <li>How does ARP work?</li>
+                                <li>Explain Subnetting.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 6. Transport Layer -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">6. Transport Layer</h2>
+                        <p class="text-gray-400 leading-relaxed">Ensures end-to-end communication.</p>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">TCP (Transmission Control Protocol)</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Connection-oriented & Reliable (error recovery, ACKs)</li>
+                            <li>Flow & Congestion Control</li>
+                            <li><strong>3-Way Handshake:</strong> SYN → SYN-ACK → ACK</li>
+                            <li><strong>Congestion Control:</strong> Slow Start, AIMD, Fast Retransmit/Recovery</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">UDP (User Datagram Protocol)</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Connectionless, faster</li>
+                            <li>No reliability or ordering</li>
+                            <li>Used in video streaming, VoIP, gaming</li>
+                        </ul>
+                        <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>TCP vs UDP</li>
+                                <li>Explain 3-way handshake.</li>
+                                <li>How does congestion control work in TCP?</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 7. Application Layer -->
+                    <section>
+                         <h2 class="text-3xl font-bold text-white mb-4">7. Application Layer</h2>
+                         <p class="text-gray-400 leading-relaxed">Provides end-user services.</p>
+                         <h3 class="text-xl font-semibold text-indigo-400 mt-4 mb-2">Important Protocols:</h3>
+                         <ul class="list-disc list-inside text-gray-400 space-y-2">
+                              <li><strong>HTTP/HTTPS:</strong> web browsing</li>
+                              <li><strong>FTP:</strong> file transfer</li>
+                              <li><strong>SMTP, POP3, IMAP:</strong> email</li>
+                              <li><strong>DNS:</strong> converts domain names to IP addresses</li>
+                              <li><strong>DHCP:</strong> dynamic IP assignment</li>
+                         </ul>
+                         <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>HTTP vs HTTPS</li>
+                                <li>SMTP vs POP3 vs IMAP</li>
+                                <li>What is DNS and how does it work?</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- 8. Network Security -->
+                    <section>
+                         <h2 class="text-3xl font-bold text-white mb-4">8. Network Security</h2>
+                         <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>Goals (CIA):</strong> Confidentiality, Integrity, Availability</li>
+                            <li><strong>Encryption:</strong> Symmetric (AES, one key) & Asymmetric (RSA, public/private key)</li>
+                            <li>Digital Signature, SSL/TLS, Firewalls, VPN, IDS/IPS</li>
+                         </ul>
+                         <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Symmetric vs Asymmetric Encryption.</li>
+                                <li>How does HTTPS secure communication?</li>
+                                <li>What is a firewall?</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 9. Performance Metrics -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">9. Performance Metrics</h2>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                           <li><strong>Bandwidth:</strong> max capacity (bps)</li>
+                           <li><strong>Throughput:</strong> actual data transfer rate</li>
+                           <li><strong>Latency:</strong> time delay</li>
+                           <li><strong>Jitter:</strong> variation in delay</li>
+                           <li><strong>Packet Loss:</strong> lost data</li>
+                        </ul>
+                        <div class="mt-6 bg-gray-700/50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-white">📌 Interview Questions:</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Bandwidth vs Throughput.</li>
+                                <li>What causes latency?</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 10. Practical & Misc Topics -->
+                    <section>
+                         <h2 class="text-3xl font-bold text-white mb-4">10. Practical & Misc Topics</h2>
+                         <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><strong>Socket Programming (C/Java/Python):</strong> client-server communication</li>
+                            <li>Client-Server vs P2P model</li>
+                            <li>Load Balancing → distributes traffic across servers</li>
+                            <li>CDN (Content Delivery Network) → delivers content from nearest server</li>
+                            <li>Cloud Networking → AWS, Azure networking basics</li>
+                         </ul>
+                    </section>
+                    
+                    <!-- HOT Interview Questions -->
+                    <section>
+                        <h2 class="text-3xl font-bold text-white mb-4">🎯 HOT Interview Questions</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                            <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                <li>Explain OSI & TCP/IP models.</li>
+                                <li>TCP vs UDP.</li>
+                                <li>3-way handshake in TCP.</li>
+                                <li>Difference between IPv4 & IPv6.</li>
+                                <li>Explain subnetting with an example.</li>
+                                <li>How does DNS work?</li>
+                                <li>Circuit vs Packet Switching.</li>
+                                <li>Go-Back-N vs Selective Repeat.</li>
+                            </ul>
+                            <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                <li>HTTP vs HTTPS.</li>
+                                <li>ARP vs RARP.</li>
+                                <li>Congestion control in TCP.</li>
+                                <li>Symmetric vs Asymmetric encryption.</li>
+                                <li>Hub vs Switch vs Router.</li>
+                                <li>NAT working.</li>
+                                <li>Difference between flow control & congestion control.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+      <!-- Timer Display -->
+    <div id="timer-display"
+        class="hidden fixed bottom-5 right-5 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-2xl border border-indigo-500/50">
+
+        <p class="text-sm">Time on <strong id="section-name" class="text-indigo-400"></strong>: <span id="time-spent"
+        class="font-mono font-bold"></span></p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-indigo-500">Educa</h3>
+                    <p class="text-gray-400">Your journey to knowledge starts here. We are committed to providing the best learning experience.</p>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="index.html#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li class="mb-2"><a href="index.html#courses" class="text-gray-400 hover:text-white">Courses</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                 <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Contact Us</h4>
+                    <ul>
+                        <li class="mb-2 flex items-center"><i class="fas fa-map-marker-alt mr-2 text-indigo-500"></i> 123 Education Lane, Learning City</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-envelope mr-2 text-indigo-500"></i> contact@educa.com</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-phone mr-2 text-indigo-500"></i> +1 234 567 890</li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div>
+                     <h4 class="text-lg font-semibold mb-4 text-white">Follow Us</h4>
+                     <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in text-xl"></i></a>
+                     </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Educa. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <script src="timer.js"></script>
+
+</body>
+</html>

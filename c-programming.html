@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Language Tutorial - Educa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .sidebar-link {
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .sidebar-link.active {
+            background-color: #6366f1; /* indigo-500 */
+            color: white;
+            font-weight: 600;
+        }
+        .content-section h3 {
+            border-left: 3px solid #6366f1;
+            padding-left: 0.75rem;
+        }
+        /* Hide scrollbar for webkit browsers */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header Section -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center relative">
+            <a href="index.html" class="text-3xl font-bold text-indigo-500">Educa</a>
+            <div class="hidden md:flex items-center space-x-8 absolute left-1/2 -translate-x-1/2">
+                <a href="index.html#home" class="text-gray-300 hover:text-white font-medium">Home</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-white font-medium">About</a>
+                <a href="index.html#courses" class="text-gray-300 hover:text-white font-medium">Courses</a>
+                <a href="index.html#contact" class="text-gray-300 hover:text-white font-medium">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl text-indigo-500"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-6 pt-2 pb-4">
+            <a href="index.html#home" class="block py-2 text-gray-300 hover:text-white">Home</a>
+            <a href="index.html#about" class="block py-2 text-gray-300 hover:text-white">About</a>
+            <a href="index.html#courses" class="block py-2 text-gray-300 hover:text-white">Courses</a>
+            <a href="index.html#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Body with Sidebar -->
+    <div class="container mx-auto px-6 py-12 flex flex-col md:flex-row gap-8">
+        
+        <!-- Sidebar -->
+        <aside class="w-full md:w-1/4 lg:w-1/5">
+            <div class="bg-gray-800 rounded-lg p-4 sticky top-24">
+                <h2 class="text-xl font-bold text-white mb-4">C Topics</h2>
+                <nav id="sidebar-nav" class="flex flex-row md:flex-col overflow-x-auto no-scrollbar pb-4 md:pb-0">
+                    <a href="#" class="sidebar-link active flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="introduction">Introduction to C</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="variables">Variables & Data Types</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="operators">Operators</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="control-flow">Control Flow</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="loops">Loops</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="functions">Functions</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="arrays">Arrays & Strings</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="pointers">Pointers</a>
+                    <a href="#" class="sidebar-link flex-shrink-0 md:flex-shrink w-full text-left p-3 rounded-md hover:bg-indigo-500/50" data-target="structures">Structures</a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main id="main-content" class="w-full md:w-3/4 lg:w-4/5">
+            <a href="lang.html" class="text-indigo-400 hover:text-indigo-300 mb-6 inline-block"><i class="fas fa-arrow-left mr-2"></i> Back to Languages</a>
+            <div class="bg-gray-800 rounded-lg shadow-lg p-8 md:p-12">
+                <!-- Introduction Content -->
+                <div id="introduction" class="content-section space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Introduction to C</h2>
+                    <p class="text-gray-400 text-lg">C is a powerful, general-purpose programming language developed in the early 1970s by Dennis Ritchie at Bell Labs. It is a procedural language, which means that programs are written as a series of steps or procedures.</p>
+                    <h3 class="text-2xl font-bold text-indigo-400 pt-2">Why Learn C?</h3>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <li><strong>Foundation of Modern Programming:</strong> Many modern languages like C++, C#, Java, and Python are influenced by C's syntax and concepts.</li>
+                        <li><strong>Performance:</strong> C provides low-level memory access and is very fast, making it ideal for system programming, embedded systems, and game development.</li>
+                        <li><strong>Portability:</strong> C programs can be compiled on a wide variety of computer platforms.</li>
+                    </ul>
+                    <h3 class="text-2xl font-bold text-indigo-400 pt-2">Your First C Program: "Hello, World!"</h3>
+                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    // This line prints the text to the console
+    printf("Hello, World!\\n");
+    return 0;
+}
+</code></pre>
+                </div>
+
+                <!-- Variables & Data Types Content -->
+                <div id="variables" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Variables & Data Types</h2>
+                    <p class="text-gray-400 text-lg">Variables are containers for storing data values. In C, each variable must have a specific data type, which determines the size and layout of the variable's memory.</p>
+                    <h3 class="text-2xl font-bold text-indigo-400 pt-2">Basic Data Types</h3>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <li><code>int</code>: Stores integers (whole numbers), such as 123 or -456.</li>
+                        <li><code>float</code>: Stores single-precision floating-point numbers, with decimals, such as 19.99.</li>
+                        <li><code>double</code>: Stores double-precision floating-point numbers, for greater precision.</li>
+                        <li><code>char</code>: Stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes.</li>
+                    </ul>
+                     <h3 class="text-2xl font-bold text-indigo-400 pt-2">Declaring Variables</h3>
+                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    int myNum = 15;             // Integer
+    float myFloatNum = 5.99;    // Floating point number
+    char myLetter = 'D';        // Character
+
+    printf("My number is %d\n", myNum);
+    printf("My float is %f\n", myFloatNum);
+    printf("My letter is %c\n", myLetter);
+
+    return 0;
+}
+</code></pre>
+                </div>
+                
+                <!-- Operators Content -->
+                <div id="operators" class="content-section hidden space-y-6">
+                     <h2 class="text-4xl font-extrabold text-white">Operators in C</h2>
+                    <p class="text-gray-400 text-lg">Operators are symbols that perform operations on variables and values. C supports a rich set of built-in operators.</p>
+                    <h3 class="text-2xl font-bold text-indigo-400 pt-2">Types of Operators</h3>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <li><strong>Arithmetic Operators:</strong> <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code> (modulus)</li>
+                        <li><strong>Relational Operators:</strong> <code>==</code>, <code>!=</code>, <code>></code>, <code><</code>, <code>>=</code>, <code><=</code></li>
+                        <li><strong>Logical Operators:</strong> <code>&&</code> (AND), <code>||</code> (OR), <code>!</code> (NOT)</li>
+                        <li><strong>Assignment Operators:</strong> <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, etc.</li>
+                        <li><strong>Increment/Decrement Operators:</strong> <code>++</code>, <code>--</code></li>
+                    </ul>
+                </div>
+
+                <!-- Control Flow Content -->
+                <div id="control-flow" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Control Flow (Conditional Statements)</h2>
+                    <p class="text-gray-400 text-lg">Control flow statements allow you to execute certain blocks of code based on specified conditions. The primary way to control program flow is with <code>if...else</code> and <code>switch</code> statements.</p>
+                     <h3 class="text-2xl font-bold text-indigo-400 pt-2"><code>if...else if...else</code> Statement</h3>
+                     <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code class="language-c">int number = 0;
+
+if (number > 0) {
+    printf("The number is positive.");
+} else if (number < 0) {
+    printf("The number is negative.");
+} else {
+    printf("The number is 0.");
+}
+// Outputs "The number is 0."
+</code></pre>
+                </div>
+
+                <!-- Loops Content -->
+                <div id="loops" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Loops</h2>
+                    <p class="text-gray-400 text-lg">Loops can execute a block of code as long as a specified condition is reached. They are essential for repeating tasks without rewriting code.</p>
+                     <h3 class="text-2xl font-bold text-indigo-400 pt-2"><code>for</code> Loop</h3>
+                     <p class="text-gray-400">Used when you know how many times you want to loop.</p>
+                     <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code class="language-c">for (int i = 0; i < 5; i++) {
+    printf("%d\n", i);
+}
+</code></pre>
+                    <h3 class="text-2xl font-bold text-indigo-400 pt-2"><code>while</code> Loop</h3>
+                    <p class="text-gray-400">Loops as long as a condition is true. The condition is checked *before* the loop body is executed.</p>
+                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code class="language-c">int i = 0;
+while (i < 5) {
+    printf("%d\n", i);
+    i++;
+}
+</code></pre>
+                </div>
+
+                <!-- Functions Content -->
+                <div id="functions" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Functions</h2>
+                    <p class="text-gray-400 text-lg">A function is a block of code that performs a specific task. Functions allow you to break down large programs into smaller, manageable, and reusable pieces.</p>
+                    <h3 class="text-2xl font-bold text-indigo-400 pt-2">Defining and Calling a Function</h3>
+                    <p class="text-gray-400">A function has a return type, a name, parameters, and a body. The <code>main()</code> function is special; it's the entry point of every C program.</p>
+                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code class="language-c">#include &lt;stdio.h&gt;
+
+// Function declaration (prototype)
+int add(int a, int b);
+
+int main() {
+    int result = add(5, 3); // Function call
+    printf("Result is: %d\n", result);
+    return 0;
+}
+
+// Function definition
+int add(int a, int b) {
+    return a + b; // Return value
+}
+</code></pre>
+                </div>
+
+                <!-- Arrays & Strings Content -->
+                <div id="arrays" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Arrays & Strings</h2>
+                    <p class="text-gray-400 text-lg">An array is a variable that can store multiple values of the same type. In C, a string is simply an array of characters ending with a special null character (<code>\0</code>).</p>
+                    <h3 class="text-2xl font-bold text-indigo-400 pt-2">Arrays</h3>
+                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    int myNumbers[] = {25, 50, 75, 100};
+    
+    // Accessing an element (index starts at 0)
+    printf("%d\n", myNumbers[0]); // Outputs 25
+
+    // Changing an element
+    myNumbers[0] = 33;
+    printf("%d\n", myNumbers[0]); // Outputs 33
+
+    return 0;
+}
+</code></pre>
+                    <h3 class="text-2xl font-bold text-indigo-400 pt-2">Strings</h3>
+                     <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    char greeting[] = "Hello World!";
+    printf("%s\n", greeting);
+    return 0;
+}
+</code></pre>
+                </div>
+
+                <!-- Pointers Content -->
+                <div id="pointers" class="content-section hidden space-y-6">
+                     <h2 class="text-4xl font-extrabold text-white">Pointers</h2>
+                     <p class="text-gray-400 text-lg">A pointer is one of C's most powerful and unique features. It is a variable that stores the memory address of another variable. This allows for direct memory manipulation and is essential for dynamic memory allocation.</p>
+                     <h3 class="text-2xl font-bold text-indigo-400 pt-2">How Pointers Work</h3>
+                     <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <li>The <code>&</code> (address-of) operator gives you the memory address of a variable.</li>
+                        <li>A pointer is declared with an asterisk <code>*</code>, like <code>int *ptr;</code>.</li>
+                        <li>The <code>*</code> (dereference) operator lets you access the value stored at the memory address the pointer is pointing to.</li>
+                     </ul>
+                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    int myAge = 43;      // An int variable
+    int* ptr = &myAge;   // A pointer variable, with the name ptr, that stores the address of myAge
+
+    // Output the value of myAge (43)
+    printf("%d\n", myAge);
+
+    // Output the memory address of myAge
+    printf("%p\n", &myAge);
+
+    // Output the memory address of myAge with the pointer
+    printf("%p\n", ptr);
+
+    // Access the value at the address the pointer is pointing to (43)
+    printf("%d\n", *ptr);
+
+    return 0;
+}
+</code></pre>
+                </div>
+
+                <!-- Structures Content -->
+                <div id="structures" class="content-section hidden space-y-6">
+                    <h2 class="text-4xl font-extrabold text-white">Structures</h2>
+                    <p class="text-gray-400 text-lg">A structure (<code>struct</code>) is a user-defined data type that allows you to group different data types into a single unit. It's useful for creating records or complex data representations.</p>
+                    <h3 class="text-2xl font-bold text-indigo-400 pt-2">Creating and Using a Structure</h3>
+                    <p class="text-gray-400">You define a structure using the <code>struct</code> keyword. To access the members of a structure variable, you use the dot operator (<code>.</code>).</p>
+                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+// Define a structure
+struct Person {
+    char name[50];
+    int age;
+    float height;
+};
+
+int main() {
+    // Create a Person structure variable
+    struct Person person1;
+
+    // Assign values to its members
+    strcpy(person1.name, "John Doe");
+    person1.age = 30;
+    person1.height = 5.9;
+
+    // Print the members
+    printf("Name: %s\n", person1.name);
+    printf("Age: %d\n", person1.age);
+    printf("Height: %.1f\n", person1.height);
+    
+    return 0;
+}
+</code></pre>
+                </div>
+            </div>
+        </main>
+    </div>
+
+      <!-- Timer Display -->
+    <div id="timer-display"
+        class="hidden fixed bottom-5 right-5 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-2xl border border-indigo-500/50">
+
+        <p class="text-sm">Time on <strong id="section-name" class="text-indigo-400"></strong>: <span id="time-spent"
+        class="font-mono font-bold"></span></p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-12">
+        <div class="container mx-auto px-6">
+             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-indigo-500">Educa</h3>
+                    <p class="text-gray-400">Your journey to knowledge starts here.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="index.html#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li class="mb-2"><a href="index.html#courses" class="text-gray-400 hover:text-white">Courses</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Contact Us</h4>
+                    <ul>
+                        <li class="mb-2 flex items-center"><i class="fas fa-map-marker-alt mr-2 text-indigo-500"></i> Learning City</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-envelope mr-2 text-indigo-500"></i> contact@educa.com</li>
+                    </ul>
+                </div>
+                <div>
+                     <h4 class="text-lg font-semibold mb-4 text-white">Follow Us</h4>
+                     <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                     </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Educa. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Sidebar navigation logic
+        const sidebarNav = document.getElementById('sidebar-nav');
+        const contentSections = document.querySelectorAll('.content-section');
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+        sidebarNav.addEventListener('click', (e) => {
+            e.preventDefault();
+            const clickedLink = e.target.closest('.sidebar-link');
+
+            if (clickedLink) {
+                const targetId = clickedLink.dataset.target;
+
+                // Hide all content sections
+                contentSections.forEach(section => {
+                    section.classList.add('hidden');
+                });
+
+                // Show the target content section
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.classList.remove('hidden');
+                }
+
+                // Update active link style
+                sidebarLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+                clickedLink.classList.add('active');
+            }
+        });
+    </script>
+    <script src="timer.js"></script>
+
+</body>
+</html>
+
+
